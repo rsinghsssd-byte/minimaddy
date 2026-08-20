@@ -1,5 +1,5 @@
 """
-MadhavanGPT — Data Extraction Pipeline
+Mini Maddy — Data Extraction Pipeline
 
 Processes all PDFs in data/raw/ and outputs a structured JSONL corpus
 at output/corpus.jsonl, ready for the chunking phase.
@@ -426,7 +426,7 @@ def print_summary(all_documents):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Extract text from PDFs and build a structured corpus for MadhavanGPT."
+        description="Extract text from PDFs and build a structured corpus for Mini Maddy."
     )
     parser.add_argument(
         "--input", "-i",
@@ -451,7 +451,7 @@ def main():
     
     args = parser.parse_args()
     
-    print("🚀 MadhavanGPT — Data Extraction Pipeline")
+    print("🚀 Mini Maddy — Data Extraction Pipeline")
     print(f"   Input:     {args.input}")
     print(f"   Output:    {args.output}")
     print(f"   Extracted: {args.extracted_dir}")

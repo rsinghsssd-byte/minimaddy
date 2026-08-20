@@ -1,5 +1,5 @@
 """
-Utility functions for the MadhavanGPT data ingestion pipeline.
+Utility functions for the Mini Maddy data ingestion pipeline.
 
 Handles:
 - Filename parsing → metadata extraction

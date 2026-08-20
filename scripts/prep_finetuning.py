@@ -49,7 +49,7 @@ def generate_pairs(blocks):
     """Send multiple text blocks to Gemini and get Q&A pairs."""
     prompt = """
     You are an AI data preparation assistant. I will provide you with several blocks of text 
-    from a transcript of Professor Madhavan speaking (either in a lecture or an interview).
+    from a transcript of the professor speaking (either in a lecture or an interview).
     
     For EACH block:
     1. Read the text and capture the exact vernacular, tone, and teaching style.

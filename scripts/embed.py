@@ -1,5 +1,5 @@
 """
-MadhavanGPT — Embedding & Vector Store Pipeline
+Mini Maddy — Embedding & Vector Store Pipeline
 
 Takes the chunked data (output/chunks.jsonl + output/parents.jsonl) and:
 1. Embeds all 1,343 child chunks using Gemini text-embedding-004
@@ -17,7 +17,7 @@ Prerequisites:
 Usage:
     python scripts/embed.py
     python scripts/embed.py --batch-size 100
-    python scripts/embed.py --collection madhavan_chunks
+    python scripts/embed.py --collection course_chunks
 """
 
 import argparse
@@ -69,7 +69,7 @@ def embed_batch(client, texts, model="text-embedding-004"):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Embed chunks and store in ChromaDB for MadhavanGPT."
+        description="Embed chunks and store in ChromaDB for Mini Maddy."
     )
     parser.add_argument(
         "--chunks-input",
@@ -83,8 +83,8 @@ def main():
     )
     parser.add_argument(
         "--collection",
-        default="madhavan_chunks",
-        help="ChromaDB collection name (default: madhavan_chunks)"
+        default="course_chunks",
+        help="ChromaDB collection name (default: course_chunks)"
     )
     parser.add_argument(
         "--batch-size",
@@ -116,7 +116,7 @@ def main():
         print("   3. Paste it in .env file: GEMINI_API_KEY=your_key")
         sys.exit(1)
     
-    print("🧠 MadhavanGPT — Embedding & Vector Store Pipeline")
+    print("🧠 Mini Maddy — Embedding & Vector Store Pipeline")
     print(f"   Input:      {args.chunks_input}")
     print(f"   DB path:    {args.db_path}")
     print(f"   Collection: {args.collection}")

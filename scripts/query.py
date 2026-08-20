@@ -1,11 +1,11 @@
 """
-MadhavanGPT — RAG Query Pipeline
+Mini Maddy — RAG Query Pipeline
 
 Takes a student's question and:
 1. Embeds it using the same Gemini embedding model
 2. Searches ChromaDB for the top-K most similar child chunks
 3. Retrieves parent (full slide) text for maximum context
-4. Sends everything to Gemini 2.5 Pro with a "Professor Madhavan" persona
+4. Sends everything to Gemini 2.5 Pro with a "the professor" persona
 5. Streams a cited answer to the terminal
 
 Architecture:
@@ -34,9 +34,9 @@ from dotenv import load_dotenv
 # ── System Prompt ────────────────────────────────────────────────────────────
 
 SYSTEM_PROMPT = textwrap.dedent("""\
-    You are Professor Madhavan, the instructor for the PDSP2025 (Programming,
+    You are the professor, the instructor for the PDSP2025 (Programming,
     Data Structures & Algorithms using Python) course. You respond exactly as
-    Madhavan would — with clarity, precision, and your characteristic teaching
+    the professor would — with clarity, precision, and your characteristic teaching
     style. You explain concepts step-by-step, use practical examples, and make
     complex topics feel approachable.
 
@@ -221,7 +221,7 @@ Please answer the question using the course material provided above."""
 
 def main():
     parser = argparse.ArgumentParser(
-        description="MadhavanGPT — Ask questions about PDSP2025 course material."
+        description="Mini Maddy — Ask questions about PDSP2025 course material."
     )
     parser.add_argument(
         "question",
@@ -246,8 +246,8 @@ def main():
     )
     parser.add_argument(
         "--collection",
-        default="madhavan_chunks",
-        help="ChromaDB collection name (default: madhavan_chunks)"
+        default="course_chunks",
+        help="ChromaDB collection name (default: course_chunks)"
     )
     parser.add_argument(
         "--parents-file",
@@ -291,7 +291,7 @@ def main():
         sys.exit(1)
     
     # ── Step 1: Initialize clients ───────────────────────────────────────
-    print("🧠 MadhavanGPT — Your PDSP2025 Teaching Assistant")
+    print("🧠 Mini Maddy — Your PDSP2025 Teaching Assistant")
     print(f"   Powered by {args.llm_model}")
     print()
     
@@ -336,7 +336,7 @@ def main():
         context, sources = build_context(results, parents)
         
         # Generate answer
-        print("\n🎓 Professor Madhavan:")
+        print("\n🎓 the professor:")
         generate_answer(client, question, context, model=args.llm_model)
         
         # Show sources if requested

@@ -1,5 +1,5 @@
 """
-MadhavanGPT — Parent-Child Chunking Pipeline
+Mini Maddy — Parent-Child Chunking Pipeline
 
 Takes the extracted corpus (output/corpus.jsonl) and produces two files:
 
@@ -151,7 +151,7 @@ def chunk_parent(doc, text_splitter):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Parent-Child Chunking Pipeline for MadhavanGPT."
+        description="Parent-Child Chunking Pipeline for Mini Maddy."
     )
     parser.add_argument(
         "--input", "-i",
@@ -183,7 +183,7 @@ def main():
     
     args = parser.parse_args()
     
-    print("🔪 MadhavanGPT — Parent-Child Chunking Pipeline")
+    print("🔪 Mini Maddy — Parent-Child Chunking Pipeline")
     print(f"   Input:          {args.input}")
     print(f"   Parents output: {args.parents_output}")
     print(f"   Chunks output:  {args.chunks_output}")

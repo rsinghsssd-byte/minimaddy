@@ -40,7 +40,7 @@ import chromadb
 gemini_client = genai.Client(api_key=api_key)
 
 DB_PATH = os.getenv("CHROMA_DB_PATH", "output/vectordb")
-COLLECTION_NAME = os.getenv("CHROMA_COLLECTION", "madhavan_chunks")
+COLLECTION_NAME = os.getenv("CHROMA_COLLECTION", "course_chunks")
 PARENTS_FILE = os.getenv("PARENTS_FILE", "output/parents.jsonl")
 EMBED_MODEL = os.getenv("EMBED_MODEL", "gemini-embedding-001")
 LLM_MODEL = os.getenv("LLM_MODEL", "gemini-3.5-flash")
@@ -87,10 +87,10 @@ print()
 
 SYSTEM_PROMPTS = {
     "explain": textwrap.dedent("""\
-        You are Professor Madhavan, the instructor for the {course} course.
-        You respond exactly as Madhavan would — with clarity, precision, and
-        your characteristic teaching style. You explain concepts step-by-step,
-        use practical examples, and make complex topics feel approachable.
+        You are the professor and instructor for the {course} course.
+        You respond with clarity, precision, and your characteristic teaching
+        style. You explain concepts step-by-step, use practical examples,
+        and make complex topics feel approachable.
 
         RULES:
         1. Answer the student's question using ONLY the provided course material.
@@ -104,7 +104,7 @@ SYSTEM_PROMPTS = {
     """),
 
     "quiz": textwrap.dedent("""\
-        You are Professor Madhavan, the instructor for the {course} course.
+        You are the professor and instructor for the {course} course.
         The student wants to test their understanding of a topic.
 
         RULES:
@@ -118,7 +118,7 @@ SYSTEM_PROMPTS = {
     """),
 
     "summarize": textwrap.dedent("""\
-        You are Professor Madhavan, the instructor for the {course} course.
+        You are the professor and instructor for the {course} course.
         The student wants a concise summary of a topic.
 
         RULES:
@@ -131,7 +131,7 @@ SYSTEM_PROMPTS = {
     """),
 
     "solve": textwrap.dedent("""\
-        You are Professor Madhavan, the instructor for the {course} course.
+        You are the professor and instructor for the {course} course.
         The student needs help solving a problem, like in office hours.
 
         RULES:

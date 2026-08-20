@@ -8,7 +8,7 @@
 
 ## 1. What is Mini Maddy?
 
-Mini Maddy is an AI-powered teaching assistant that answers student questions about university courses **in the voice of Professor Madhavan**. It uses a Retrieval-Augmented Generation (RAG) pipeline to pull relevant lecture slides, textbook pages, and exam content from a vector database, then feeds that context to a Gemini LLM that responds as the professor.
+Mini Maddy is an AI-powered teaching assistant that answers student questions about university courses **in the voice of the professor**. It uses a Retrieval-Augmented Generation (RAG) pipeline to pull relevant lecture slides, textbook pages, and exam content from a vector database, then feeds that context to a Gemini LLM that responds as the professor.
 
 The system supports four query modes:
 - **Explain** — Breaks down a concept step-by-step like a lecture
@@ -110,7 +110,7 @@ We attempted to fine-tune a Gemini model to natively speak like the professor.
 
 | File | Purpose |
 |------|---------|
-| `app.py` | **The main web server.** FastAPI backend that serves the chat UI and exposes the RAG pipeline as SSE streaming endpoints. Endpoints: `GET /api/courses`, `POST /api/query`, `GET /`. Loads ChromaDB and parent documents at startup. Contains 4 system prompts (explain, quiz, summarize, solve) with the Professor Madhavan persona. |
+| `app.py` | **The main web server.** FastAPI backend that serves the chat UI and exposes the RAG pipeline as SSE streaming endpoints. Endpoints: `GET /api/courses`, `POST /api/query`, `GET /`. Loads ChromaDB and parent documents at startup. Contains 4 system prompts (explain, quiz, summarize, solve) with the the professor persona. |
 | `requirements.txt` | Python dependencies: `marker-pdf`, `pymupdf`, `ftfy`, `langchain-text-splitters`, `chromadb`, `google-genai`, `python-dotenv`, `fastapi`, `uvicorn` |
 | `README.md` | Basic project overview with setup and naming conventions |
 | `.gitignore` | Excludes `.env` (API keys), `__pycache__/`, `.DS_Store` |
@@ -214,7 +214,7 @@ python scripts/query.py "What is a dictionary in Python?" --show-sources
 | `EMBED_MODEL` | No | `gemini-embedding-001` | Embedding model |
 | `TUNED_MODEL_ID` | No | `None` | If set, overrides `LLM_MODEL` with a fine-tuned model |
 | `CHROMA_DB_PATH` | No | `output/vectordb` | Path to ChromaDB storage |
-| `CHROMA_COLLECTION` | No | `madhavan_chunks` | ChromaDB collection name |
+| `CHROMA_COLLECTION` | No | `course_chunks` | ChromaDB collection name |
 | `PARENTS_FILE` | No | `output/parents.jsonl` | Path to parent documents |
 
 ---
