@@ -1,0 +1,777 @@
+See, so long as AI was a toy, which is a laboratory toy, it made no difference. But now, if AI is ruling people's lives,
+deciding, you know, which rums to shortlist or which uh loans to be sanctioned. So ultimately, computing, I
+would say, is about systematic and efficient problem solving transcends the use of computers. We cannot escape maths
+in today's society. I mean everything that we do is governed by a lot of you know numerical facts and decisions. One
+of the difficulties of mathematics as a subject is that it is cumulative. Right? So if you don't understand what is
+happening in class 5, you are not going to understand what's happening in class 6 and you rapidly fall off the cliff.
+[Music]
+Namaskar and welcome to another edition of the Professor Mahesh podcast. Your resource to help you make informed
+career decisions. This podcast is brought to you by IATM Global, an initiative of the office of
+global engagement at IIT Madras designed to help take everything IIT Madras and
+India broadly to the global audience. Our research, our teaching, our startups, our enterprise, our thinking
+broadly. This podcast is uh to help you all uh make informed career decisions.
+In the episode today we have professor Madhavan Mukun the director of the Chennai Mathematics Institute, a
+theoretical computer scientist by training and uh someone from someone who
+works very closely with some of the best mathematicians in India today. Thank you for choosing to come on this episode
+Madan. Thank you. Thank you for the invitation Mahes. It's a pleasure to be here. Let's start a little bit with your
+Computer Science in the 1990s
+own u uh academic journey. You started uh first at IIT Bombay and you obtained
+a BC computer science and then went to do a PhD at Aros. Uh tell us a little
+bit about computer science in 198286 in India of that time. What was it like
+to do computer science during those days? Yes, it was the I mean computer science
+itself of course was a very young subject and in particular in India I think computer science programs were
+just starting and uh there were I think at least in IIT Bombay I think computer
+science was seen more as an extension of electronics I mean the as a kind of the
+computational machinery not so much I would say about you know the mathematical underpinnings or even
+software uh even though they were very strong uh groups in software. For instance, IAT Bombay had very antiquated
+computing equipment but IIA Bombay produced an excellent Forran compiler which ran on this very resource
+constrained machine and made it possible for us to actually write and run programs in the 1980s when it was
+difficult. But there was very much a perception at that time that a lot of the interesting things in computer
+science were to do with VLSI you know building chips building circuits and so on and not so much emphasis I would say
+on you know software as a whole but certainly not so much on theory. So from
+that background to come to theory was a little bit of a switch for me. When I graduated I think I did not have any
+intention of working in theory. I was quite comfortable with the idea of of building systems, software systems. So I
+did a B techch project on a on a compiler and uh then I started working for uh what was called NCST in those
+days. It's now a part of CDAC in Bombay, the National Center for Software Technology and this had been incubated
+inside TiffR. So it was designed at that time or intended as a software development resource for public service.
+So for government and for uh PSUs and so on and they had just moved out of TIFFR
+and they had started doing some kind of R&D applied R&D work
+but uh it so happened that they still had hostile space in TIFFR. So my
+initial 6 months was spent staying in Tifr and commuting to work and in TIFFR
+I came into close contact with the computer science PhD students who were working largely in theoretical computer
+science and I got fascinated by the kinds of discussions they were having
+with each other and the kind of ideas that were being thrown around and how they were part and parcel of computing
+even though I had not appreciated it probably as a BTE student. So that got me into this and they persuaded me in
+fact to uh trade my job for a PhD. Wonderful. You know many don't know that
+many don't know but u in the late60s and '7s TiffR was a world powerhouse in
+computer science they had one of the world's most powerful computers thanks to the vision of Dr. Homi Baba and a few
+others. Computer science in India was just taking shape you know even at IIT Kpur,
+I Madras, IT Bombay. What was the industry like around at that time? Did you get a feel for it as a student?
+Uh so as a student I I must say that we were not very aware of course I think uh
+TCS had just about started and I think maybe the consulting industry was just in its infancy
+and of course there were a few uh tie-ups with u because you know personal
+computers were just beginning to come in or not personal but maybe business computers but of not computers with
+filled a room but which could be placed inside uh an office and so there were some hardware tie-ups you know Tata
+Burrows and so on but I think that honestly I I don't think that we really
+had a very clear idea but it didn't look like for us at that time that industry
+in India was a very worthwhile opportunity to pursue after BTech and uh
+so either one would look for these kind of u you know at the government was
+making initiatives so soon after this uh we graduated C dot started for example in telecom which was also interesting
+from a computer science perspective to some people but then in places like NCST
+were probably more attractive and maybe you know BARC and places like that which
+had some applied computing but I think the vast majority in those days were thinking in terms of higher studies
+going for masters and then looking for jobs abroad if necessary but not so much in Indian industry. M so from your days
+Prof Madhavan’s professional career
+at TFR u what was your professional career where did your professional career take you after that so actually
+though I got my degree from Orus it's actually my PhD is more from Chennai than from Orus so at that time in the
+mid80s was when uh the institute of mathematical sciences IMSC here underwent a kind of transformation and a
+a new uh growth period so professor sees from the came as the head of the
+mathematics group and he was quite receptive to the idea of theoretical computer science being a part of the
+mathematics research thing and so professor PS Thiagarajan one of the more
+well-known Indian theoretical computer scientists was migrating back from a
+long stint abroad and so he came to Chennai and set up a group which is now the basically the nucleus of what is now
+both I would say the computer science group at institute of mathematical sciences and at CMI when I was in TFR
+one of the people there was coming to join IMSE as a faculty member and so he persuaded me to write to Thiagarajan and
+uh I wrote to him and he invited me and he immediately said please join and that's how I became a PhD student in
+computer science so I was here for about uh two and a half years and then by some
+circumstances of the time uh a part of the group led by sichadri and left IMS
+to start a new institute and that is what is the became eventually CMI
+But uh as luck would have it because of my background and because IMSC and CMI in those days had an affiliation with
+Madras University uh Madas University would not let me register for a PhD with a BTE.
+Okay. So because of these peculiar circumstances and the fact that Jagarajin before coming to Chennai had
+been in Arus he spoke to some of his former colleagues and in Europe in many European universities including in in
+Denmark and Netherlands they have a form of the PhD where you can take published
+work and string it together with a kind of over uh over uh some introduction and
+put a put together a thesis which is made up of publications. So that is the uh reason why my degree is from Orus
+even though I spent less than a year actually in Orus but I spent many months after that visiting Orus but uh really
+it's a Chennai PhD disguised as an wonderful I think there are you know I
+don't know how many institutions even today would take a B tech student into their PhD program in India today so and
+then u so that's a I mean mathematics and Chennai seem to have been inseparable for a long time you know
+Chennai Mathematical Institute
+IMSC has played a central role ITMAS has supported that effort. Uh and
+CMI tell us a little bit about this very unique institution, its origins and you
+know where it stands today. Yeah. So CMI as I said started with this kind of
+maverick move. So I think the origins of CMI of course there are some other reasons why Sichadri wanted to possibly
+move out of IMSE but one of the main uh things that I think he had in mind at
+that time was to start some kind of a kind of teaching program to support
+because IMSC is like TFR and many other such institutions in India are purely
+research institutions. they only take PhD students and this has been unfortunately a historical trend which
+has possibly separated out the research groups from the teaching universities in
+India and uh Sichadri wanted to bring that connection back and unfortunately
+the mandate of the such institutions especially in a government setup is very hard to change because you need certain
+uh you know fundamental things to be done to be able to do this. So part of the motivation for moving out was to
+eventually have a teaching program and it took a long time but even more
+experimental was that this new institute was set up under private funding. Yes.
+Uh so initially it was under the corporation for about 10 years and uh
+towards the end of I mean ' 89 is when it started and 98 finally uh an avenue
+opened up for starting a teaching program. as you like my PhD the main bottleneck was who will give the degree.
+So we found a very supportive person in professor Digshit who was a
+mathematician himself but who was a vice chancellor of the open university in Madhya Pradesh. So he was able to pilot
+this through their system and make CMI degree come through them but give us
+full autonomy to run the program. So with a very small beginning we started the teaching program and that I think
+has been the differentiator between CMI and some of the other institutions in that you know a research community of
+mathematicians interacting with a small group of students on a kind of uh peer basis and that has made I think all the
+difference in in how the institute is shaped and of course it has grown a lot since then in those days it was really
+tiny and uh we had you know less than 10 faculty and probably a handful of even
+undergraduate students the batch sizes were 10 and so on but it was a very I think good nucleus to build from. I
+think people like professor Shashadri who sort of started with a mission you know have really there there handful of
+people have made difference to the country in many many different small and big ways. Let's step away from uh the
+institutions and talk about math and math in India today. I think um
+Math Education in India
+there's a recent study that I came across that progress in math and
+performance in math by by students largely is one of the earliest indicators of increasing GDP. The it's
+it's a it's not just a positive correlation but almost a causation. Um
+India is a at the grassroots level there is a complete
+u purchase adoption of the idea that math is a wonderful subject to study
+there nobody would argue about it. You'll occasionally hear a few things uh a few people say you know math is not
+for me that's perfectly all right but across the board there is this idea that
+math is a wonderful subject to study in India broadly u so we seem to be in a
+good position tell us from your vantage point where do you see school math uh visa v the global level where is India
+good what is India good at and what could India adopt and change and improve as you said I mean the culture of
+studying mathematics I think is deeply ingrained Fortunately, people see value in mathematics as a subject and it's
+sort of equated equated with doing well in life, right? So, somehow if you do well in mathematics, then you're good.
+But unfortunately, the flip side is also that if you don't do well in maths, you're perceived as somehow not uh
+having the capability to do anything worthwhile. And that I think is not a good uh way of putting it because one of
+the difficulties of mathematics as a subject is that it is cumulative, right? So if you don't understand what is
+happening in class 5, you are not going to understand what's happening in class 6 and you rapidly fall off the cliff in
+terms of keeping up with the class. So I think where we have possibly not done a good job is to have multiple pathways
+through the school system to keep students engaged at different levels of ability, comfort and you know interest.
+So ultimately if students are doing it not out of interest but because they're compelled to and then it becomes a mechanical uh you know learning some
+rules and applying some procedures and not understanding why the answer not even being able to check if the answer
+that they have come up with makes sense. They are not really achieving much in terms of other than teaching people some
+and also a lot of emphasis on precision you know getting the right answer rather than understanding why you reach that
+point. So I think we have a long way to go in terms of possibly scaling up the
+math uh teaching pedagogy to account for the differences in uh you know general I
+think there is I don't have any doubt looking at my own children that different people have different
+aptitudes for maths for some people maths comes naturally for some people it is a struggle and it is it is a reality
+I don't think we can shy away from this but we should not reach a situ situation for where those who perceive maths as
+being difficult are kind of dissociated from math because that leads to a problem in terms of engaging with
+society as because we cannot escape maths in today's society. I mean everything that we do is governed by a
+lot of uh you know numerical facts and decisions like even deciding which mobile plan to opt for you need to have
+some quantitative uh reasoning skills to just cope with our modern day life. So I
+think that is the gap that we have to bridge and uh it's a tough call because
+there are lots of pressures including the fact that school teachers have to be kind of equipped with the necessary
+material not just the teaching skill but they need to have support material because they are very stressed in terms
+of the number of students they have to handle. So we need to provide enough support so that they can deal with
+different types of students and the curriculum I think should be a little bit more flexible. Now that is also a challenge because then you need that
+many more types of teachers correct to teach. So overall I think it's a human resource problem in terms of I think
+implementing the ideas that would be ideally required but the fact that we
+have I think a cultural uh you know whatever adoption adoption
+and one of the things I think which we find less in India I would say at least at school level than in other countries
+you know there is this perception in many countries that girls are discouraged from doing maths. Now if you
+look at school performance in maths in India, I don't think really there is any you know difference up to school board
+levels of of girls and boys. So I think at least we have avoided actually girls outperform boys. Yeah. So at least at
+school level we have avoided this kind of genderization of maths. But unfortunately after that there are other
+factors which come in with competitive exams and all that which I think are biased in different ways. But but I
+think at least we are we have done some things right. But I think there are a lot of things lot of things I think we need to do to because the system of
+education has in I mean going from a system where students studied in in
+small not everybody studied up to high school and not everybody studied in uh
+all subjects to a system where you have a kind of universal expectation that everybody studies these subjects. you
+have to adapt to the fact that once you you know make it a broadsp spectrum uh program you also have to cater to the
+spectrum of uh students who come through that program. So that's something where I think we need to work and we are trying to work I mean I'm also involved
+with the NCRT in in redesigning the school textbooks for maths but it's a hard cell mainly because of this whole
+thing this linkage to the training teachers and making the resources available and everything. I remember
+when I was in uh 8th grade and this is now 84 85
+uh I remember there was a choice that students could make between choosing to do what was at that time called general
+math versus composite math. Composite math had more algebra more next advanced
+geometry. The general math was more in you know simple interest compound interest calculation a very like
+utilitarian view of mathematics. I thought there was some merit to that approach and students chose where they
+went into. Is that what NCERTT is coming back to? So that is yeah to an extent a little bit like that but I think now
+there are even broader uh I mean beyond just the kind of subjects which
+traditionally would go in like what we would call maybe business math as you would call it. But now for instance
+there are a lot of interesting ideas that every student needs to know about just as we were talking about numbers
+right every day you read the newspaper there will be some chart or the other you know quantifying some aspect of life
+it might be talking about uh sale of uh bicycles or it might be talking about uh
+heat you know temperature in summer temperatures. So if you can't understand data, if you cannot you know analyze
+visual graphics, you cannot uh make sense of charts. So these kinds of skills also I think and these are used
+also from a subject perspective across the board. You know social scientists, life scientists, they need to know these
+kind of things because there is a lot of math modeling which goes in these subjects and if you turn them off by making all mathematics only about
+calculus and engineering then you are doing a great disservice to the community as a whole. So I agree that
+you know we have to have these kind of things but there are a lot of other pressures you know because as I said the
+school system has to adopt both kinds has to have teachers for both kinds and there is also of course this vexing
+issue which is behind the thing about how many students are failing in maths you know because ultimately if you make
+maths challenging students are not going to do well because it is a problem-solving subject and not every
+problem immediately strikes you as uh you know a thing that you know how to solve. So if you want to make some
+everybody pass in maths, the tendency is to make everybody take the lowest level of mathematics. So if you have two
+choices, one of the criticisms is that schools will opt to offer only the less
+challenging choice and therefore you will do a disservice to the students who need strong. So it's a there are many
+issues involved but broadly yes I think that up to a certain level say up to 10th grade everybody should study maths
+to a level where it is applicable to whatever interests they have and maybe in class 11 12 when they are
+specializing you could have two streams one which is more towards the what we now have which is the science and
+engineering kind of math and one which is more supporting through statistics probability and other aspects people who
+would use it on a day-to-day basis in whatever discipline they have followed. So that's a good perspective on school
+Higher Math Education in India
+education. I think uh let's switch and talk about college education. We have our BSE math programs then we have MSSE
+programs. Um as per the allindia survey on higher education today in India we
+have about 26,000 MSE graduates coming out annually and about 300 plus some
+this is only mathematics not theoretical computer science 300 plus PhDs coming
+out. What is the college math education system like in India today? You know CMI
+is the crown jewel of math education in India. What is the rest of the education
+looking like? what are some things we can learn from others outside uh for that the system. So I think
+unfortunately from what I hear so if you leave aside some of these uh institutions which are kind of operating
+at a slightly different level. So CMI is of course purely math but even if you look at uh IATS or the ISERS the Indian
+institutes of science education and research. So there are a handful of these institutions I mean which are kind
+of offering attractive math but even they struggle to get for example an ISER
+has say 200 students joining across four disciplines say physics maths chemistry
+biology and maths typically my guess is out of 200 maybe 10 or 15 will be opting
+for maths so it is a low uh volume of students who are taking up maths even in
+these big institutions So CMI of course is by nature a small institution. We take about 40 to 50 a year but Indian
+statistical institute has a BMath program. They also take about 50 60 a year. So the number of students actually
+opting for doing mathematics in these so-called uh you know tier 1
+institutions is still in a few hundreds I would say overall if you add it all up.
+If you switch to the traditional you know the classical college things there the BSE maths thing seems to fluctuate a
+lot and my uh what I've heard from people in the last couple of years postcoid is that the uptake is really
+poor so many smaller colleges see every college has to run a maths department simply because there are maths courses
+which are being offered across disciplines so you cannot shut down a math department but there are not enough
+takers for a BSc or an MSE in maths MSE is I think even more rare So there are many colleges which are
+actually closing down sections or closing down their BSE program completely due to lack of takers. This is a very bad sign. And perhaps the
+reason for this is also related to the perception that people have that the kind of BSE maths uh curriculum that
+they are studying maybe they feel it is not somehow relevant to professional
+careers afterwards. I'm not sure exactly what are the reasons for this but somehow there seems to be a lack of uh
+social uh value attached to this. People would rather do something which is more like a
+BCOM or something like that or even a BSE in in pure sciences. I don't know
+whether the situation is similar but there is seems to be a particularly uh negative view may have maybe among
+people who put their children in college of of what a BSE maths has to offer and I think we need to change that
+perception to get more because the numbers are not really a a good
+indicator really the question is whether the students coming out of these programs are properly trained in the
+subject and how many of them are actually inclined to follow up and do something more related to what they have
+studied. That is really a better metric. And I'm pretty sure when you say 26,000 people are coming out of masters in
+mathematics, I'm pretty sure that only a few hundred are doing anything related to mathematics after that. Many of them
+are probably looking for some run-of-the-mill uh career which doesn't even require the skills that they have.
+Careers in Pure Mathematics
+So what would be some careers even globally where you would be convinced that that person is still doing math as
+a career? Yeah. So this is a difficult question to ask. Of course, traditionally there have always been in the engineering and you know design kind
+of careers where you obviously need to I mean even fields like architecture and so on I guess you know but civil engine
+I mean any kind of engineering related career there will be roles for people who have mathematical modeling skills
+and all that but of course increasingly we see for the last several decades that
+uh finance has become a very mathematical activity. I mean you have all these very complicated uh I mean of
+course one part of it is just you know economic modeling forecasting what are the trends and deciding whether uh
+interest rates are going to go up or down and where to invest but even the kind of uh uh instruments as they call
+them which one can invest in you know you have these futures and these kind of options and all these kind of things I
+mean designing them you know what is the correct uh reward to be attached to one
+of these instruments these are all very mathemat mathematical activities and I think a lot of the finance companies are
+looking for people with that kind of mathematics training. It's not necessary that the person knows anything about
+finance or or the world of these options before they join. But they should have the mathematical skills to appreciate
+what kind of models are being used and of course adapt them because these so this mathematical modeling in a context
+like economics or finance has a very different role from mathematical modeling in say in physics or biology.
+See if I have a wrong model of gravity it will be wrong. I mean there is a reality of gravity and there is my
+model. So gravity is not going to change because I have posited a wrong model. But when you have a wrong model of of
+economic behavior and people follow it then the behavior of people changes and then your model itself influences
+somehow how and even if you have the right model if if the model assumes that
+minority of people are doing something intelligent and if the majority start doing the same thing then it is no
+longer a so these are very tricky things you know. So mathematical modeling in these kind of areas is requires constant
+adjustment. So it really requires somebody who has a good feel for how to use the tools and techniques. So this is
+definitely one area. But in the last I think the biggest domain which is now crosscutting in the last 7 8 years is
+this explosion of data. Everybody has data and they don't know how to make
+sense of it. Right? Because everybody has computational devices. Everybody has even you know manufacturing factories
+have these uh instruments which give out health information about their uh
+various shop floor right so if if you can tap into this you can make a lot of decisions of course retail you don't
+even have to ask because if they know customer profiles and and buying habits they can of course you know inventory
+and sales targeting so I think across the domain entertainment is one of the big things you know Netflix made a lot
+of its uh headway because of being able to predict customer preferences and so
+on. So whether it's you know entertainment or retail or manufacturing or again you know companies like pharma
+and so on there's a lot of mathematical modeling which goes into different kind of data depending on the nature of the
+thing. So I think that is probably to me today the largest uh domain in which
+people with mathematical skills can make headway but I think finance remains
+attractive because usually it pays higher. That's why you just explained in fact the power that mathematics has on
+our lives u you know it's per it's all pervasive it's all around us. I can I
+can be the expert at predicting the sunrise and go to the king go to my king and say sunrise is in the east but
+today's king will ask me bring me some data and proof to go with it right so in some sense what you're suggesting is
+it's mathematics training formal training towards a b bachelor's masters
+is good but develop the skills required to apply to a different discipline while you are in college for example I'm just
+paraphrasing or sort of adding on to what you said if a MSE student also
+gained some footing in the finance world that person would be far more employable. How could how could somebody
+do this? Are there online resources or what would be a way to do resources of course now the great thing about today's
+world is that resources are in plenty. The difficulties in in understanding which ones to follow because there are
+almost too many. It's like giving somebody a library and saying go and look look read through it right. uh but
+as you said I think uh you know at there are core skills and there are of course domain specific skills. So core skills I
+would say that you know now for example some facility with programming or you
+know doing because it is we have gone beyond the stage where we can do all this kind of uh mathematical analysis by
+hand. So one has to have a little bit of comfort at least exposure and willingness to work with and tools are
+now much you it's no longer the old days when you have to start writing code by you know punch cards and all that you
+know there are lots of tools and lots of things which make it quite easy to use but one has to be not afraid and have
+some basic computational skills and the other part of it is that you know try to
+understand a little bit about different domains as I said I don't think that most companies are still demanding that
+the they get uh people who are well uh trained in that particular domain
+because I think they're willing to give them that training but they have to be receptive to that training and that is
+where I think they're really looking for that thinking u capacity and above all I
+think this is what a a degree in mathematics teaches you I think it teaches you a certain style of thinking
+and I think that is not uh I mean it's not not a simple thing to
+absorb. No, I think u you know math training you've said you've taught this
+course in our BS program on think something that I'm right computational
+thinking right and these are skills that a mathematician naturally embibes into
+them and these are skills that are absolutely important for you know becoming a
+successful applicational computer scientist at some point let's switch and talk about research original knowledge
+Research in Mathematics
+being produced in India that's at a completely different level globally today and where is India at and
+what do you see as the steps that we need to take to really be uh globally
+competitive there so I think um as in many of the disciplines not just in
+mathematics I think uh we have a few very strong centers which are competing
+internationally in the level of mathematics that and related subjects that is done in India but probably too
+few. So I think that given the of course this is always a dangerous thing to say with respect to India because India is
+so large. So if you divide by the denominator of India, everything is microscopic. But I think given the scale of India, I think there should be more
+such centers because also mathematics has gone from the last couple of hundred
+years has gone from being something where you know an individual uh can really work in isolation and and make
+headway. It is a community effort because the the nature of knowledge has become so diverse and so deep that it's
+very hard for any one person to understand all the kind of connections
+and ramifications that may be needed to solve really abstract problems in mathematics. So we lack that is where I
+think we are not doing so well which is to have these large enough groups of
+people talking to each other. So the research community in India and I'm saying this is not only for mathematics
+it is a general comment it is a little fragmented because each institution that we talked about all the I mean TFRs or
+IASC or IIAT or each of them of course has a very strong department on its own
+but each such department would be small compared to a corresponding say department in a in a large university
+say in a place like the US and in that department there will be a few people working in different aspects of it And
+there's not much inter institutional research collaboration unfortunately in India for various reasons but part of it
+is just logistics. I mean until now when now it is possible to move around and to meet online. It just used to be very
+problematic to have collaborations across cities and so on. So I think that is something we need to try and maybe we
+could now because we have of course very much better communication networks and
+we should have maybe more places or interaction points where people come together and and talk to
+each other about related things that they are doing. But India has produced I think a lot of very strong
+mathematicians. Some of them of course have ended up uh moving out of India also to pursue their uh uh research. But
+u given our constraints I think uh we could do better but it requires a kind
+of collective effort on the part of the institutions involved involved to understand that this is in their
+collective benefit to actually collaborate at a research level because
+at research level mathematics is a very different game from the kind of things we were talking about earlier when you
+are applying problems uh to day-to-day things. So it really requires a very deep uh understanding of very abstract
+things and uh as I said these things have the subjects have become so uh
+intricate that it takes a really long time for anybody to even understand enough to make progress. So pushing the
+boundaries of mathematics requires a lot of groundwork in terms of uh training
+and the depth to the depth at which some of the unsolved problems reside are you
+know truly require some require a young man or woman to spend a significant part
+of their life to get to the problem itself. I think that's become the nature of Yeah. And some of these problems are
+not very I mean the problems themselves are innocuous looking. Yes, especially I
+mean the most accessible ones for the general public are problems about numbers. you know problems about prime
+numbers and all that but even otherwise some of these problems are not difficult to explain what is the problem but the
+how to solve it in an adequate ma mathematically adequate manner is uh
+requires a lot of so entire branches of mathematics so you know like this famous
+problem of firma of x to the n plus y to the n equal to z to the n I mean that has apparently only to do with numbers
+but it has led to enormous uh advances in mathematics just in order to build
+the tools required to solve the problem. So mathematics has has this tendency to to create structures which arise
+seemingly unconnected to what you're trying to solve. And so many times you use techniques from one area to solve
+problems in another area. And I think that kind of interconnection and that kind of uh interplay requires I think
+people with different backgrounds within mathematics to talk to each other more and that's where I think we need to have
+more conversations in the research community. I think you know the sense of discovery that uh comes with you know
+proving a theorem like you like Fermas last or others is almost it's it almost
+gives you the feeling of having discovered some sort of a truth that was always there and you know we were the
+first to find it. Let's talk a little bit about at the highest level about the different branches. You talked of number
+Mathematical Branches
+theory. At the highest level, what are the different branches of mathematics that are being pursued in the research
+in the research community today? So, of course, you know, there are the traditional words that we hear a lot
+like algebra and geometry and so on. Uh so, so algebra essentially started with
+uh you know, manipulating symbols and so on. But the main connection is that you
+know from the idea that you can write an equation and it can represent a physical
+object like you can write an equation and it represents a line or a circle or a more complicated threedimensional. So
+the connection between algebra and geometry has become an integral part of understanding uh how because finally
+many things in a physical manifestation are actually can imagine them to be
+geometric right. So even if we look at data for instance right so we are used
+to the idea in school that know we write x comm y as a point so it is a two-dimensional thing but now if I give
+you a table which has 10 columns even though I cannot draw it I can imagine that it's a 10 dimension each row in the
+table is a 10-dimensional point in some very abstract sense so all the kind of
+manipulations that you're doing in terms of separating out which ones are similar which ones are different are the same as
+taking a bunch of points drawn on a piece of paper and drawing a line separating them. So geometric
+interpretations are very intrinsic to understanding but the manipulations often involve a lot of algebra and so
+there's a lot of interplay and then there are of course subjects like topology which tries to go beyond the
+concrete geometry is a bit concrete in some sense about specific curves and surfaces. Geometry uh topology is more
+about the abstract properties about shapes you know does it are these is this connected it's not connected so on
+so the famous thing that to a topologist a coffee cup is the same as a maid
+because they are both things which have one hole in them and so on so these are all of course still and different types
+of geometry have evolved in the last 150 years we are used to a geometry which we
+perceive as you know on a flat surface but if you look at the geometry on the earth's surface. If you look at a flight
+path for example on an earth surface and if you compare it to the a straight line you draw on a map like if you take two
+cities across the globe say you want to fly from Chennai to Frankfurt or something like that and you draw a
+straight line on a map which you think is the shortest path to fly. It is actually not the shortest path because
+actually it's a curved surface. So if you portray it on a it becomes a kind of
+a curved line. So now if curved surfaces have different properties from flat
+surfaces for example triangles don't behave like they do. You can have triangles which have two right angles or
+three right angles in a in a curved surface. So but these geometries for example became part of say Einstein's
+theory of relativity. So space time in an abstract sense is it curved or is it flat? So they have ramifications in
+understanding you know our fundamental ideas about physics and all that and of course uh even in biology now a lot of
+the functioning of molecules proteins depends on how they fold. So understanding the geometry of those
+things. So geometry itself has a lot of manifestations and uh so these are
+basically I would say you know algebra, number theory, geometry, topology broadly cover uh the kinds of topics but
+within them there are a lot of subsp specialcializations of that people are interested in. Very nice. Um let's talk
+Theoretical Computer Science
+about your own discipline. You know what are the origins of theoretical computer science out of mathematics? How did it
+how did it originate and what do what does a theoretical computer scientist
+work on? So first of all I think historically theoretical computer science precedes computer science
+because the first idea about computational devices came out of theory. So about
+more than 100 years ago some questions were asked about the nature of proving things you know.
+So when you write a proof if you have done kind of geometry proofs in school
+you start with some axiom and you say because of this this follows because of this this follows. So in a sense if you know which rule to follow then the fact
+you're trying to prove becomes a a mechanical process in some sense of assembling the right steps so that you
+reach the target that you need. So the question abstractly was that is every statement a logical statement about
+mathematics provable in such a way. Is there a kind of automatic way where you can actually churn out a proof?
+And uh this required you to understand what does it mean to have an autom what is it what is this process right the
+process of mechanical computation how do you characterize it and this led to the
+idea of what could be a computing device and this is what we attribute to famous people like Alan Turing and Alonzo
+Church roughly about 90 years ago mid30s early 30s they came up with these ideas
+about what constitutes a kind of mechanical computation
+And the surprising thing that they showed is that there are problems which you can state quite naturally including
+the original problem about all statements in a kind of logical language which cannot be computed. So that is the
+most surprising thing that he came up with that there are many things that which you would like to compute which we cannot compute. But out of Turing's u
+model of computation a kind of a mathematical model of computation came what is essentially the architecture of
+the computer that we use today. So the idea today is that we have this memory and we have this instructions and then
+they execute the instructions but the instructions also sit in the memory. So there is no distinction between where
+your program is stored in your computer and where your data is stored. It's only one place. This is all actually a
+physical manifestation of the theoretical computer science ideas of
+Turing in particular about how computation works. But more recently after maybe 1960s people started looking
+at other aspects and in particular one of the questions was efficiency you know so you not only do you want to do things
+automatically but how fast can you do them can you do things so one thing is if I can demonstrate that something is
+fast I can try to explain how fast it is but are there problems which you cannot do fast like are there problems which
+intrinsically require you to look at a large number of possibilities for and there are many such problems which
+historically ally have been there likeuling you know if you want to find an or resource I mean related to that
+resource allocation so if you are for example an airline and you have crew and you have to fly them all over the place
+and they have to take shifts how do you best allocate your staff to your aircraft so that you minimize the amount
+of unnecessary time that people are flying around and so on so these are all you could do it by trial and error and
+now the question is can you do better right similar problem could be that if you're shifting your house and then you
+have to put all your furniture in a truck and you want to figure out whether it'll fit in one truckload or you need
+two truckloads or so what is the minimum number of truckloads given that you cannot take your bed apart into small pieces so you have to put in as a whole.
+So these are all problems which are of practical importance and computationally it's not clear that there are good
+solutions to this. So this idea of algorithms, efficiency,
+complexity, this has been one of the driving questions in the last 50 60 years and it has become now old enough
+that it's become a kind of classical problem in computer science itself to understand this interplay between the
+resources that you have and the problems that you can solve. And the other part which which is my
+research interest is that now you build more and more complicated computing systems you need to validate that they
+are doing what they are supposed to be doing. So you come into this so this is one of the original problems that Turing
+showed cannot be done. You cannot take a program and write another program which
+will check that it's correct. M so you want to ask I you have written so you are a teacher a student submits a
+program you want to know whether that program will work correctly on the so you say they have written a program to calculate factorial or something like
+that in general you cannot tell whether it'll work right across all programs so now but if I build a system I need to
+validate it so how would you validate given that there is this bottleneck how do you do this so it's like an
+engineering extension but the engineering objects are not physical objects but software objects so I set up
+a telecom network or I set up an automated signaling system or I set up something which is for example of
+current relevance today which is software which is flying a plane how do I make sure that it is doing the right
+thing right so that is one aspect of uh theoretical computer science these are all you know ideas in mathematics but
+very grounded in in a real opportunities for for you know for adding value to
+society and at the foundation of all this is this discipline of discrete mathematics tell us a little bit about
+Discrete Mathematics
+what is discrete mathematics and what would a student what does it teach the student? Yeah. So the discrete
+mathematics the idea of discrete uh in this comes from the fact that
+traditionally mathematics has talked about you know functions right so you have real numbers and real numbers as we
+know there is no gap right between any two real numbers there's another real number so you're talking about some
+something that varies as you increase time what happens to the distance or as you increase some supply what happens to
+the demand so these are continuous things because supply increases continuous continuously or population
+increases continuously. Discrete is talking about separate objects. So now I'm asking you if I have you know uh
+some 25 teachers and if I have uh 17 courses and how many different ways can
+I allocate them right? So you're talking about problems like this which involve uh count you know separate items they
+are not continuous but some kind of uh orderings reorderings matching and all
+that. So this is where the idea of discrete mathematics some a lot of computational problems are naturally
+discrete in nature because they are like we were talking about packing furniture in a truck you have some finite number
+of objects in your house right it's not that you have 1.3 beds or something like that so so discrete mathematics and
+understanding how I mean it sounds very childish but understanding how to count right how many different ways can you do
+this so that's really counting in a different sense not just counting 1 2 3 4 enumerating systematically all different
+arrangements and making sure you have not missed out anything at the same time you've not duplicated anything. So starting from there so enumerating
+counting properly making sure that or even counting the same thing in two different ways to make sure that you've
+not made a mistake. Then you have these ideas of graphs. So graphs are objects where you take these so you take people
+for instance and you connect them if they are friends. So people are ask these questions about social networks
+for instance right? So if you have a social network where people are talking to each other, they are somehow
+communicating, then how far apart are any two random people, right? Will they find one person that they know in
+common? Will it take two hops, right? So these are questions where you're looking at this social network graph where the
+graph the you have these people and they're connected by a link. So how many links does it take to go from here to
+there? So these graphs have a very important role to play. So there are lots of abstract problems which you can
+formulate on graphs which when applied concretely give you a lot of practical answers. So this is a slightly different
+style of mathematics from the traditional mathematics where you're talking about sin cos and you know or x
+to the 5 and so on. So that's why people sort of I think disconnect it in some
+sense from mathematics as a whole and call it a separate thing. But I think it's as intuitive and possibly more intuitive for at least for school level
+students to appreciate and it definitely gives you a much uh stronger grounding when you get to computing. So I think
+both are important. It's not that one is less or more important than the other. But this is of course more relevant I
+would say for people who are studying computing as a subject. That's a so let's now talk about math and computing.
+Math and Computing
+I mean we've under we've looked at the underpinnings of where math helps
+computer science. Uh clearly math is positioned to where positioned to
+provide the best foundation for a computer scientist but it's not perceived that way. Computer science is
+now perceived to be this completely different discipline from mathematics. What can we do to solve or to provide
+the right information? What can we do to bridge this information gap? Yeah. So I think as you rightly said a lot of
+places computer science is equated with the word computer. It's a hard I think it's an unfortunate choice of
+terminology possibly some many computer scientists object to using the word computer science because they say it's
+not like you know it's not like washing machine science as my colleague says it's really more computing science
+exactly so computing science is one way of getting around it uh in in uh in
+European countries they call it informatics because it it is really about manipulating information right
+computing is a lot about manipulating information so it's abstract it's not about and the process of doing it is is
+what is important and not the physical manifestation. So the fact of whether you're doing it on a on a particular
+computer or not but here in our context a lot of the emphasis in
+computer science it automatically translates to learning this programming language or learning that programming language or being familiar with this
+computing environment or that computing. So I think there is a definitely a disconnect between what computing stands
+for and its manifestation in terms of physical computing devices and this
+connection I think we need to or this distinction we need to make clear. Now the fact is of course that if you have a
+stronger background in the mathematics of computing you automatically become a better programmer because a lot of
+programming is about logical problem solving. So ultimately computing I would say is about systematic and efficient
+problem solving. Yeah. So it is transcends the use of computers. You can do you refer to this computational
+thinking course that we have in the IATMBBS program. So that uses no programming at all. No computers at all.
+It's all about telling how to solve different types of what are actually
+traditional programming problems but just systematically how to go about it. You know what are the kind of steps that
+you need to take and this helps no matter what type of problem you're doing. So, so this I think is where one
+should emphasize now of course the attraction of computers and use and the ubiquity now that everybody has access
+to computers it's very easy to get sidetracked into the into the physical part of it you know learning the
+language or writing and of course there is also a tangible reward which comes with as you were talking about proving a theorem but it's even more tangible if
+you write a program that works and does what you think it is doing right so to show that oh I did something and it produces output there's a very real uh
+kind of t tactile reward So a lot of people get uh uh more focused on those
+aspects and they lose track a little bit about the found. So the the real challenge is that you start attacking a
+problem based on the tools you have rather than how to solve it. So it's like a carpenter or any other kind of a
+craftsman who starts hammering away because they have a hammer without understanding whether this is the first
+step to be done or something else should have been done before that. Right? So you need to analyze the problem and then come up with the best solution. But
+often you just hammer away at it and find the first solution that works which may or may not be the best one. And that
+is where I think the distinction comes between having a strong mathematics background and not having it. We talked
+of um mathematics as pro as providing the the fundamental thinking mindset to
+New Fields for Mathematicians / Data
+solve quantitative problems right and finance is a field that we alluded to
+earlier that is ready to absorb this sort of thinking in a big way. developed
+economies already have a track for a mathematician to go onto Wall Street and
+you know do their thing. I think it's a natural course of development that countries like India would also adopt
+this thinking increasingly. We talked of finance but what are the other fields
+where you will see where we will all see mathematicians go in in big numbers and you know finance will obviously happen
+in India as well. No so finance is already happening. Of course, many of the finance companies which are hiring
+in India are possibly international companies with bases in India. But even some Indian banks I think are looking at
+these kind of things. But I as I mentioned before the larger perspective right now is really uh this anything to
+do with data. So we have all around us now because of uh you know uh electronic
+commerce right we have a huge logistics network of people warehouses deliveries
+all this so there are lots of things that need to be optimized right so if you are a big merchant selling lots of
+goods you're a flipkart or an Amazon or something like that then you need to first of all make sure that your
+customer will get what they get in the time that you promised them therefore you have to keep the right amount of stuff and not too much and you have to
+have a way of delivering it. So you have to have a network of and then even if it comes down to food you know Swiggy
+Zomato now restaurants are no longer cannot rely on how many people walk in through the door right they have to
+anticipate how many people will order online to make sure how much of different items to make. So so logistics
+all these things require some optimization. So optimization in different forms is avail is required in
+many industries. So logistics is one large uh uh you know domain as I
+mentioned before even surprising things like entertainment, advertising a lot of these things are now driven by you know
+analysis of how uh customers will react. So a lot of things are tailored based on
+data. So I don't think I mean our experience is that it is quite
+uh widespread you know manufacturing as I said is also becoming more aware of the possibilities of improving
+efficiencies improving output uh you know making there's always been a demand
+for people in terms of reliability and quality control and so on but these
+things are all converging now because the access to the data is much more computational techniques to deal with
+them and mathematical uh uh concepts to analyze come together and I think this
+is where I think most people who have a strong mathematics aptitude will find
+something or the other which will be of interest to them and where they can also play a a very positive role.
+That's a great idea. Let's put ourselves for a minute in the position of the employer in any one of the many sectors
+that you just described. I have an option to hire let's say an MSE math a good good MSE math graduate with all
+these skills you described and a BTE computer science so or even possibly
+even an M techch computer science if I am if I go with hiring the MSE math
+graduate a good person what will I get and what will I not get by hiring the
+Mtech computer science graduate and also vice versa yeah so so it as I said many of these
+industries are not per se technology industries. Right? So I think if somebody has a BTE or an MTech in
+computer science, one of the things hopefully that they have learned and which they can apply is how to build and
+develop better computing systems. Right? So if you have really uh uh something an
+IT infrastructure that you need to develop and you need to build up some kind of a software platform then you
+would definitely look for somebody who comes with this kind of a skill. On the other side, if you have some adequate
+access to off-the-shelf platforms which people can use and you
+are really more interested in in applying insights into the information
+that you have collected and improving your kind of business in whatever way it
+can be more efficient, more profitable, whatever, then I think somebody who comes with a wider set of math skills is
+probably the correct person. And I think this is where we are seeing the shift that you know the previously the a lot
+of these things were together. I mean the technology companies were offering solutions of this kind but now the
+solutions are coming from I mean the companies asking for these are no longer necessarily technology companies. So I
+think that's where the uh need or the better fit for the math background
+graduates comes in. Very nicely put. Let's talk about the the flavor of the
+Artificial Intelligence
+day artificial intelligence. You know you've talked of data science. What are the mathematical underpinnings of
+today's AI world and what can mathematics do for this whole field.
+So what mathematics can do for this whole field but it's very far from clear how to do it is to kind of understand of
+course what is happening. So we are still at a stage now I think we are at the stage where we were with natural
+science you know classical science maybe thousand years ago where we could see something fall but we don't know why it
+is falling. So I think in the same way I think we see these systems which are incredibly complicated behaving in very
+very uh unpredictable but also very int seemingly intelligent ways based on the
+data they have ingested but we really have no idea of knowing how they are going to work and how reliable they are.
+So I think the holy grail right now is to have a mathematical theory or or some
+way of of understanding how these systems evolve as they grow in terms of
+ingesting more data. But uh so that I would say is of course so a lot of mathematics goes into building these
+systems and that is a very different kind of thing. But uh I I would say that
+in the last my impression at least is in the last several maybe five seven years
+a lot of the advances in in the AI models and all that has actually come
+more from experimentation than from theory in the
+sense that people are designing new systems based on some instinct that maybe this will help maybe that will help. So it's a bit like taking some
+engine and tweaking, you know, turn this valve, turn that valve. Talk of engine. I I'll have to interrupt you for just a
+minute. The steam engine was invented in the 1840s. A working model was realized.
+It was doing some things for people. But the laws of thermodynamics were written a clear 40 50 years after the steam
+engine was working. I can see a parallel to this is one of my colleagues from Colombia, you know, brought this out in
+a talk he gave. um no and I think that is very true. Similarly, I mean
+electricity and you know Maxwell's equations are not you know you don't need Maxwell's equations to to have
+electricity right so the same way I think AI has now reached that stage where people are I would say you know
+really it is still a very experimental science that the unfortunate aspect of
+it this is experimentation is very expensive right both in terms of the computational power involved and in
+terms of the amount of data which needs to be ingested to check whether the
+experiment works or not and that has made this whole thing a little bit unequal. I think that outside these
+large corporations which includes Google's and Amazon and metas of the
+world even academic institutions in large wellunded academic institutions in
+places like the US struggle to have the kind of resources to do these experiments. So really it's
+become a situation where one small group of industries is really making
+decisions about which directions to move and the rest of the people are trying to catch up in some sense but I think from
+a mathematical point of view I think it is really but it's going to be it's not easy I don't I think it's going to be as
+complicated as anything uh that we have done in understanding any other kind of uh you know complex theory as to why
+these things work and of course the other challenges that we we are no closer with all this uh AI models and
+all to understanding how actually our brain works right so neuroscience and you know computational uh AI are two
+very different beasts so that is still a challenge right so we are not in in a in
+a way we are not really capturing or even close to understanding our own
+thought processes so it's not surprising that we are not able to actually get that right what I'm hearing you say is
+now is as good time as any to be a theoretical computer scientist or a or a
+mathematician inclined to this set of problems. Um, and when we have written
+the laws of AI so to say, what would that AI world look like? I'm sure it'll
+be less energy consuming, more orderly. What are we aspiring to do as a
+theoretical computer science community there? So I think as a going back to what I
+said earlier you know when you you make complex systems you need to when you deploy them and that is where really the
+challenge comes so long as AI was a toy uh which is a laboratory toy it made no difference but now if AI is ruling
+people's lives you know it is making decisions about various things innocuous decisions about what TV show to
+recommend to you but also deciding you know which rums to shortlist or which uh
+loans to be sanctioned function and then at another level how to navigate a car.
+You need to be clear why it is doing what it is doing and whether it's doing it right. Leave aside the other problems
+that we have which is about fake news and you know in influencing opinion
+manipulation whether something which is being put out is actually real or whether it is being manipulated. So for
+all these things I think we need to be able to have that clarity right. So what is real, what is not real, what are the
+possible, what is what are the boundaries. Uh so I think that is where we need to
+aim for. So a world where we understand these better is one where we can control it better. See right now everybody's
+talking about regulation. But regulation is not possible unless you understand what you're regulating. And
+unfortunately AI is not like something tangible like nuclear power where you can say you cannot you know store
+uranium or you cannot I mean it's a very intangible resource. So how do you stop people from experimenting? You cannot uh
+so at best you can say okay when you deploy something in a public way at least we can check whether it is doing
+what it's doing or not. that should be our it's a very tall tall uh
+thing to reach but I think we should aim for that. So this I mean we talked of this explanability as a problem right
+and uh as a as an area where mathematicians and theoretical computer
+scientists have an important role to play and in some sense make it give us
+all a sense of comfort when we are using our future AI tools. At the end of the day, if something is not explainable,
+I'm always wary of what it can do for in some unseen situation. Um the underpinnings of mathematics in
+Changes to the Education System
+India, you know, educational system um requires some rethink given the set of
+new problems that are in that are on the horizon. Uh tell us a little bit about
+CMI's own model of at the undergraduate and the post-graduate level. what do you do that you think others should emulate
+and what can we do then to scale this up to the rest of the country. So part of CMI I think is because it is not scaled
+I would say because so CMI started as I said with a very small program and even now the program is quite small. So we
+have about 40 faculty and another 30 postocs and so if if you look at postphd
+people on campus it is easily 75 to 80 at any given time and we have 40 50
+undergraduates in a batch. So we have only 150 undergraduates interacting with 80 uh PhDs. So this is a very healthy
+ratio for people who want to explore mathematics because the great philosophy
+which has always been there is that there is no barrier. So students are encouraged to come and discuss ideas or
+to explore new ideas. So there's a fairly free atmosphere of inquiry and
+research and that's one thing we have been very fortunate. it I don't think it is conscious but it is something which
+has evolved and maybe like in all institutions this is something which spreads within the student community
+independent or whatever we may want but there is a very strong peer uh respect
+and desire to do research and this drives a lot of what CMI is about you
+know this idea that you are really there to learn things I think this has gone out of a lot of our institutions a lot
+of our institutions have become pathways to kind of uh attractive jobs and people
+forget that they have to learn something. They are more interested in how they should burnish their uh CVS,
+what kind of projects they should do mainly with a view towards something outside the educational system. So I
+think that is something where uh to an extent this works well in CMI because it is small. I don't know if it would work
+so well if we had 500 students instead of 150 let alone 5,000 students. So how
+to inculcate that? I interest in the subject. So that is the main thing that
+we need and uh I think there is fortunately as I said there is no shortage of good material. I mean there
+are enormous number of very very well produced videos on different subjects
+very exotic subjects also in mathematics which the interested student can consume. So this is the challenge now.
+How do you get the interested student to go to this material because the
+uninterested student unfortunately will not go even if the material is excellent. Right? So there is no way to persuade somebody who doesn't have the
+interest to watch something because it is good. So we need some better way to identify and there are lots of such
+students. I'm sure I mean in any population there will always be a fraction of students who have interests
+in different areas and aptitudes in different areas. We miss a lot of them. because our education uh kind of
+priorities are and I said this is not necessarily a problem of the system but it's a problem of maybe how our society
+has reacted to the system but we have really created this uh professional
+courseoriented mentality. Everybody wants to be either a doctor or a lawyer or an engineer or some you know
+something which immediately leads them to a profession and uh the role of acquiring knowledge has taken a backseat
+and so we also face this we have had uh parents tell us that they would love I
+mean ch our students who want to come are always interested in coming but at the school level especially students
+don't make their choices we have had parents tell us that you know we are doctors we don't know but our uh
+brother-in-law or our uncle has told is that after he studies maths he can only teach tuition classes. So, so this is
+the kind of mindset, right? So, we have to break that mindset, educate people. So, podcasts like this help that there
+are, you know, very viable careers outside academia, outside school systems for people who study these subjects and
+get students who are really interested to come. So, we should unfortunately like in every other area the number of
+opportunities for good students is limited. That's an unfortunate thing. But even there I feel we are missing out
+on good students even knowing about the opportunities and taking them more are coming up as I said I I have started
+good undergraduate math programs in in some of these institutions is are there so I think the number of good student
+good opportunities is growing slowly but how many students are we losing because they are not even aware that this is
+what they want to do and they can do that is something we need to somehow try and reach out so uh so I don't know what
+is the best strategy for Right. Certainly I mean programs like this or just conducting kind of summer schools
+encouraging people a lot of I mean in CMI itself among our faculty we have at least a handful of people who have come to maths after studying engineering and
+I know other people also some people from IIA Midas who have moved to maths after engineering. So I think this has always been the case that students start
+in one thing and then they realize that and so we should try to get students who are
+not aware to try and try it out and see if they're good. I think education for
+livelihood versus education for life is I think is a question that
+u is only to be grappled with in advanced and developing
+developed societies. I think India as we all get to that point we will see more
+of this education for life rather than education for livelihood as as the paradigm in which we make decisions.
+back to the pursuit of new new knowledge which you said is central to most
+undergrad students at CMI. Today's you know uh plain vanilla BSC
+curriculum in a college out there has very little emphasis on new knowledge
+pursuit. Would it be a good idea to add that? How could we do that?
+Yeah. So this it is a challenge I would say because uh even for CMI students I
+mean new knowledge is not necessarily new in the sense of it could be new to them new to them right and that requires
+some awareness among the faculty. So I think what is really key to the CMI experiment is that the people who are
+teaching are actually actively involved in research. So they see opportunities from the questions. For example, I mean
+we all have this uh experience that you know once in a while in a class a student asks something which really you
+may be able to answer immediately but it sets off a train of thought which says you know why this and why not that. So
+you have to have that openness whereas a lot of the people unfortunately who teach in these colleges have a set
+routine you know they will follow a set book and set set of notes and they will not deviate from that. So there is no
+attempt also to explore beyond the boundaries of what has already been
+prescribed. So that mindset but that comes I think with the baggage of having
+to retrain faculty to teach in or to think of teaching in those ways. So it
+requires a lot of resetting. Maybe as I said if we can make resources available
+so that the teaching can go on as it is but there could be some additional uh
+enriching material for students who are wanting to explore outside the thing. If you can have some collective way of
+doing that maybe that would be one way to bootstrap out of this uh system. Technology can probably help. Technology
+is there and it can definitely help. As I said the main thing is to make it uh you know it's too much in some sense
+right? So you have to make it accessible in a way that students can make sense of it and that's where we need when we talk
+The IITM BS Program
+of technology and education we can't not talk of the BS programming and data science uh that ITM offers in which you
+had a a shaping hand tell us a little bit about the thinking behind that
+program so part of I mean the main I think thought thinking behind the program is
+precisely this idea that there are talented students out there whom we are not reaching right through all are IATS
+and CMIS and all these institutions. So how do you get these students into the
+system or give them a chance to get into the system and also at the same time make it relevant and that's why I think
+the decision to make it focused on data science because that as we have been discussing is one of the really tangible
+job oriented areas in which mathematics talent can be done. So the idea was to invert the pro
+the situation from being one where you are very selective about students who join to being one where you admit
+students with a very generous minimum background but then you are very
+particular about how they continue because in Indian systems we are used to the idea that if you join a college it
+is sort of the college's responsibility to finish and give you a degree. So now the situation is that you and much
+before in some sense or in parallel with all the new ideas from the education policy about having multiple exit
+options and all that the idea was that it's not that you make people leave but you give them options to leave with
+different degrees of of achievement. So everybody can choose for themselves that
+you know this is enough or this is something which interests me but I'm I'd rather do something else. And therefore
+there's a kind of uh funnel which gradually takes a large number of students and filters out those and the
+ones who finally finish the degree are relatively few but a large number start and I think that's probably the kind of
+model we need to see how we can replicate it because this is the only way you can bring in I think people from
+a large cross-section of backgrounds and give them an opportunity to see whether
+this makes sense for them or not. I'm not saying that everybody should study mathematics but at least everybody who
+is thinks they are interested should have an opportunity to find out whether these kind of subjects can make sense
+for them or not and at the same time it'll be good if the people try it out learn enough to make use of this but
+then go and do something else that is also valuable because these are skills which are life skills now I think and as
+you said even though a small fraction only end up graduating with the final terminal degree everybody gets a feel
+for good quality education everybody has experienced uh you know good quality
+fountains of knowledge. This has been a wonderful conversation uh in the sense that we started talking
+about mathematics and theoretical computer science and where these groups of uh where groups of people trained in
+these uh sciences can really play a significant role in the in the decades
+of tomorrow in India. uh what would you tell parents and
+Final Advice to Students and Parents
+students who still who view mathematics as a as an academic subject? I mean you
+said you know you're only going to be good for tuition classes which is extremely far from the truth of even
+today and certainly is going to be far from the truth you know a few years from now. Yeah. So of course I mean at its
+heart I mean every research mathematician is studying it out of academic curiosity and interest for
+ideal truth as we discuss proving theorems proving abstract facts about
+intangible objects but research is also only a minority outcome
+for people who come through this. Traditionally as we said the people feel that if you don't succeed in research
+then you must end up teaching but that is not the case at all. I mean there are enormous number of industry
+areas you know in out out there where people are keen to get inputs with this
+kind of a background. So it's a question of mindset. So if the student has this
+openness to doing things in a domain which they may not be familiar with. See
+this if you study mathematics it is not that you know anything about retail or you know anything about uh you know
+pharmaceuticals or you know something about whatever domain you're going to work with but you have to be able to
+appreciate that the problems there have some abstract structure which and you need to of course understand in what
+context to apply. So there's it just needs some little bit of openness a little and there's enough material
+around to study these things and understand it at a high level at least as a student but there's no need to I
+think the companies don't expect students to have domain knowledge they just need them to have this kind of mathematical thinking skill and problem
+solving I think problem solving is the biggest challenge you know that for example CMI students who go out into
+data science jobs our feedback from the employers has been that after two or three years the distinguishing factor
+from people who come from more traditional statistics programs is that as the problems change because
+everything as we said is evolving. The nature of the problem the nature of industry is evolving. These students are better at coping with this change
+adapting themselves because they have been trained to think in a kind of independent way about problems rather
+than being trained to look at certain tools and certain solutions as the only way to do something. So I think that
+independent thinking skill is what really distinguishes people who study maths in its true sense and makes them
+capable of adapting. If there is one discipline that we can guarantee will not go out of fashion, it
+is mathematics. I mean as deep as it has gotten into our lives and and the D by
+DT on that you know it's only going deeper and deeper into our lives. I think there are uh very interesting
+careers that are in the offing uh for sound mathematicians to go appreciate
+domains and solve problems in their in in those domains. This has been a a fascinating conversation. I learned a
+few I learned a lot and thank you Madan for coming. Thank you Mah. I think it's a great opportunity and I hope that this
+reaches out to some students and parents and convinces them that mathematics is
+something they should consider as a viable option if they are really interested in the subject and not shy
+away from it. Sure. I I'm certain it will. Thank you again. This is the
+Professor Mahesh podcast brought to you by IATM Global, an initiative of the uh
+office of global engagement at IIT Madras. your resource to help you make
+informed career decisions. Until the next episode, be well, do good and keep
+in touch. Namaskar.

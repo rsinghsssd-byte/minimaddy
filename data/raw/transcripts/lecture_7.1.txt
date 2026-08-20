@@ -1,0 +1,360 @@
+Intro
+So, we saw that if we have  dynamic data, data in which   values are being inserted and deleted and  we want to maintain a sorted property so  
+that we can search efficiently in it, then  we need to move from a linear structure to  
+a two dimensional structure and we came  up with this idea of search trees.  
+So, in a search tree, if you  remember, at every node you have   values and all the values on the left are to the  smaller than v and all the values on the right  
+Search trees
+are bigger than v. So, this tells us how to search  for a value. We look at the root node and we can   decide whether to go left or right. And remember  that in a search tree there are no duplicates.  
+So, with this we had this property that if  you actually started navigating the tree you   would always walk down a single path whether  you want to find a value or insert a value  
+or delete a value. So, therefore all operations  on a search tree are actually in the worst case  
+proportional to the height of the tree. But the problem that we saw was that you   could have an unbalanced tree, for example I  could have a sequence where I start with an  
+extreme value on the top and I could have just a  linear sequence going down one side of the tree.  
+So, this would have height which is proportional  to the number of nodes or to the size.   So, what we would like to do is come up with a  way to have balanced trees which have logarithmic  
+height. So, if we have logarithmic height then  we are guaranteed that these operations all take  
+only logarithmic time, and so over a sequence  of n such operations you will take n log n time,  
+which is similar to what you would do if you  do n binary searches on a sorted array.   So, even though the data is changing from time to  time including the cost of inserting and deleting  
+items and the cost of searching for them using  this find operation, everything takes log n time.  
+So, over n such operations if you could  balance the tree you would do n log n work.  
+So, our question today is how to balance  the tree? So, we know that the tree might   be balanced to start with but as we  start inserting and deleting items  
+then the balance will change. So, what we need to  do is incrementally adjust the balance so that at  
+any point the tree does not become too unbalanced  because it will take a lot of work to reconstruct   the balance tree which becomes too unbalanced. So, we want to incrementally keep the balance  
+so inductively as we go along  we always have a balanced tree.  
+So, to get started on this we not, first need  to agree on what we mean by balance right. So,   balance roughly means what we think of. So, if  you take a balance in the conventional sense,  
+when you go to say the vegetable market the  person has a balance. So, the balance means   that what is on the two sides, the weights that  the person puts and the vegetables on the other  
+side balance out, they are about the same. So, in terms of a tree what you are saying is   that if I look at the tree and I look at  its left sub tree and the right sub tree  
+then these two trees must be roughly the same  in some quantity, some quantitative measure.  
+So, we have two quantitative measures that  we can define on trees as we have seen. So,  
+the first one is size. So, size is just a  total number of nodes. So, this is just a   total number of nodes. And height is this length  of the longest path from the root to a leaf.  
+So, supposing we first try to define something  on size. Now of course, a perfectly balanced   tree, now balancing is something which  has, has to happen everywhere. We do not  
+want the tree to be unbalanced anywhere.  So, at every node we want the same number   of children on the left and on the right. Now, what happens now is if I have one node it is  
+fine. If I put something here I am forced to put  something here because I need them to be the same.   Now, if I put something here because this,  this part must be balanced I must put something  
+there. And similarly, now because the must  be balanced, I must put something there.   So, either I have a tree with only one node or  I have this tree with two levels complete or I  
+have a tree with three levels complete and so on.  So, these are called complete binary trees. So,   you can think, remember in a heap we might have  had a situation where we had only this much. So,  
+we did not have these two nodes. So, heap builds up a tree in a kind   of complete fashion by doing it level  by level but it is allowed to have  
+some incomplete nodes on the last level. In a  complete binary tree every level is full. So,  
+either you have one node or you have one plus  two nodes or one plus two plus four nodes. So,   every complete binary tree will have 2 to the  power k minus 1 nodes for some power of k,  
+to 2 to the power 0 minus 1 2. But now if this is the only situation in   which you can meet this, it is obviously not  useful because why, how do we guarantee that  
+over this period of sequences, and sequence of  deletes and inserts that the number of nodes we  
+have has this nice property. So, we cannot demand  that the size must be equal at every node because  
+that is too restrictive. It only applies when  the size of the tree is a particular value.  
+So, we could relax it a little bit by saying  okay, we do not want it to be exactly equal,   we just wanted to be within one, for example.  We want roughly as many nodes on the left as  
+the right, and this will give us some better way  of doing it. But it turns out that maintaining   size on the left and the right is very difficult  to do in an incremental fashion. So, we will,  
+not although this is something which  could work we will do something which is   different from this using height.  
+Height balanced trees
+So, remember what height is. So, height is  the number of nodes on the longest path. So,   you start at the root and you walk down and you  pick the longest path to, among all the leaves  
+that you have. You see how many nodes you visit.  So, if your tree is empty then there is no root,  
+so the height is 0. If the tree has only a root  then the height is 1 because the longest path,  
+the root is also a leaf, the longest  path consists of just that one node.   In general, if I have a tree then if I want to  find out its height so I will, inductively I will  
+have a height here and I will have a height here.  So, this is going to be 1 plus the maximum of  
+h 1 and h 2 because the longest path from  here is either the path that follows the   longest path on the right or it is the path  that follows the longest path on the left,  
+and in either case I am taking that longest path  in my left or right sub tree and adding this one   node to it so it is 1 plus the maximum of the  heights of the left and right sub tree. So,  
+this is how you formally define the height. So,  what do we mean by a height balanced tree?  
+So, let us assume that there is  this function in our python notation   called height which we can apply to a node  and it will return the value of the height.  
+So, what we really want is the height of  the left sub tree, self-dot left dot height,  
+and the height of the right sub tree, self-dot  right dot height should not be more than 1 off.  
+So, they need not be equal but they cannot  be more than 1 different from each other.   So, they must be within 1. It does not  matter whether self is, left is more or  
+right is more. Either of them could be more  but the difference should not be more than 1.  
+So, it turns out that we can actually maintain  height balanced trees. And height balanced trees  
+are also called AVL trees, and this is named  after the two people who first discovered it  
+so there is a Russian mathematician computer  scientist called Adelson Velskii, and there is  
+another one from the west called Landis. So, both  of them in some sense parallelly discovered this  
+class of trees and how to manipulate  them to maintain this height balance.   So, these height balanced trees  are also called AVL trees.  
+There are other types of balanced trees  which you can use but we will not look at   them. We will only look at this particular  one to illustrate that it is possible.  
+So, of course now we have chosen something  plausible. We said we have size and height,  
+and we kind of, without giving a proof we said  that maintaining size balance is difficult.   So, we decided to opt for height balance. But  
+the whole purpose of this was to get this  logarithmic height. So, how do we guarantee  
+that if we have a height balanced tree and we have  n nodes the height is proportional to log n.  
+So, we first have to establish this mathematical  fact otherwise there is no point in going for a   height balanced tree because it does not serve  our purpose of making everything logarithmic.  
+So, what we want to try and see is how bad  can it be. So, bad in this sense means that  
+I would like height to be small with respect to  size, which is the same as saying that I would   like size to be big with respect to height. I want  to size to grow as a function of height very fast.  
+So, what is the smallest size I can restrict  a tree to if I give you a given height?   So, this is our, so what is the minimum  height balanced tree of a given height? So,  
+if it is 0, we know it is the empty  tree. If it is 1 then we just have   this trivial tree consisting of a root node  because that is the only tree of height 1.  
+If it is 22, it is easy to see it  is either this one or it is the one   symmetrically, which has a right child. I want height 2 so I have to have a child  
+of the root but I want to have the smallest  number of nodes with such a property so I do   not put the other child. I could also put both  children but then I would get a larger tree. So,  
+the goal is to find the minimum size tree  that is height balanced for a given height.  
+So, by inspection is easy to see that for two  I can either put a left child or a right child   and I will get a tree with just  two nodes which has height 2.  
+What about three nodes? Well for three nodes  first of all I need to construct a path of   length 3, that is the minimum that I need. Now,  once I construct a path of length 3 on one side  
+then remember that the two sides cannot differ by  more than 1 so I am forced to construct a path of  
+length 2 on the other side. So, I am forced to  put something on the other side. But that can   be only one node because I do not need to put,  as, I do not need to put more than necessary.  
+And because of the property that this part  is already height balance I do not need to   put a right child at the bottom and I do not  need to put, of course, anything there.  
+So, for a height of 3 I can get away with  the tree which has only four nodes. So,  
+basically if I have 0, no height, I get 0 nodes,  if I have 1 height I get one node, if I have 2  
+height I get two nodes, if I have 3 height I get  four nodes. So, it does not seem as though we are  
+getting very far in terms of being, our goal is  to say that if I fix h then size must be large.  
+And it does not seem to be growing very fast. It  is growing very slowly, as a matter of fact.   So, how would we actually proceed to the  next level? If I want to find, now for 3,  
+we did it by, kind of inspection. By, by 4 it is  not very clear. So, if I draw a tree of height 4,  
+I first have to construct a path of length 4,  and then I have to start balancing it all over   the place. I need to make sure that this part  is balanced so I need to put something here,  
+then I need to make that this part is balanced  so I need to put something there and so on. So,   how do you systematically construct the next level  tree, which is small with respect to the height  
+1 more, height increasing by 1 more? So, it turns out that this,  
+in fact is, I mean up to symmetry and all that, of  course, all these things remember, are symmetric.   I could have drawn this tree also by putting the  thing on the right-hand side for example. So,  
+there are many possible ways of drawing  these trees. So, up to symmetry I claim   that this is the smallest tree you can draw  of height 4 which is height balanced.  
+Now, if you look at it closely you will see that  on its left it has this tree. And on its right  
+it has this tree. And this is  not really a coincidence because   if I want to increase the height by 1 then the  left sub tree must have height minus 1. So,  
+I need, so if I want the overall height to be 4, I  need something on one side which has height 3.  
+And I want the smallest possible  tree of size of height 3. So,   I already know how to do that.  I take the smallest possible  
+tree of height 3. I know it is height  balance and I put it on the left-hand side.   Now, in order to keep this height balanced,  because I put 3, there I must put something  
+which is 2 on the other side, at least, because  otherwise the difference will be more than 1. So,   I take the smallest possibility of height 2 and  put it there. So, this is the general strategy.  
+If I want to build a tree of height h which  has the smallest number of nodes possible,  
+I will first find the smallest tree of height  h minus 1 and stick it on the left sub tree   because that h minus 1 plus this new, the  new root gives me a height of h. Similarly,  
+I will take h minus 2 and stick it on the  hand side. Again, I want the smallest tree   of that size. So, if I if I keep incrementally  finding the smallest tree of every size then  
+when I get to h I know the smallest trees of  the smaller sizes. So, I can stick the correct   ones together to get myself a height balanced  tree which is smallest possible of size h.  
+So, so this is our, I mean we argue that this is  the smallest tree that we can construct which is  
+height balanced and has a given height. So, our  goal is to show that these trees are growing  
+fast. So, notice that up to here it looked  like it was growing slowly because I had,   remember, one node here, two nodes here, four  nodes here, but here suddenly I have got 1, 2,  
+3, 4, 5, 7 nodes here. So, there is some hope  that things are actually growing faster than,  
+that the next level would be even faster because  remember, the next level will have this on the   left and this on the right. So, it will have  seven nodes on the left and it will have  
+four nodes on the right. So, overall this will  have 7 plus 4 plus 1, it will have 12 nodes.   So, there is some apparent increase in  the growth. So, can we quantify this?  
+So, let us try to define this function. So,  the capital S of h is the size of the smallest  
+tree we can draw which is height balanced and  has h. This is what we want to calculate. How  
+big is or how small is S of h compared to h. So,  we have seen that if the height is 0 then it is 0.  
+The size of the smallest tree with height 0  is 0, and for 1 it is 1, that we drew. Now,  
+our strategy tells us that the way we  construct the smallest tree of size,   of height h is to first take the smallest tree of  the lesser height, h minus 1, take another tree of  
+h minus 2 put on the other side.  So, this, this node is balanced.   And then I have to account for the new root  that I have put in, so I have to add a 1.  
+So, that is what we said here. If I go here, this  is 2 plus 1 plus 1. So, I get 4. Here I get 4  
+plus 2 plus 1, so I get 7. And the next one as we  said will be 7 plus 4 plus 1 will give me 12. So,  
+this gives me this recurrence which says that S of  h is 1 plus S of h minus 1 plus S of h minus 2.  
+So, how do we figure out how fast this grows?  Why is this going to become a large number? Well  
+I am not going to show you why it grows  fast. I am just going to show you why it   should grow fast compared to something which  you may have seen or you can go and look up  
+very easily, which is the Fibonacci sequence. So, if you remember the Fibonacci numbers, you  
+start with 0 and 1, and then you keep adding the  previous 2. So, the next number is 1 plus 0 is 1,  
+the next number is 1 plus 1 is 2, then 3, then  5, then 8, then 11, and so on, and these numbers  
+grow pretty fast. So, the recurrence for  this is that the 0th Fibonacci number is 0,   the 1th Fibonacci number is 1, and  the nth Fibonacci number is the sum  
+of the previous two. So, if you look at this,   the big difference between our recurrence and  the Fibonacci recurrence is that we are adding 1.  
+So, we are not just taking the previous  two values but we are adding 1 to it.   So, what this says is that S of n is definitely  bigger than or equal to F of n. Initially it  
+is the same but after I get to 2 it is going to  become bigger because the second Fibonacci number,  
+if you notice, is 0 plus  1, whereas here I get 2.  
+So, the size of this tree is growing at least  as fast as the Fibonacci numbers with respect  
+to the height. And now you have to go and find  out for yourself that the Fibonacci numbers  
+grow exponentially. So, the nth Fibonacci number  is actually exponential with respect to n. So,  
+given that the nth Fibonacci number is exponential  with respect to n, the size of the h height tree  
+must also be exponential with respect to h. So, this rests on the argument that Fibonacci  
+gives you an exponential growth and the  size of this smallest tree of height h  
+is sitting above the Fibonacci sequence because I  am actually adding 1 with respect to what I would   be computing if it was a Fibonacci sequence.  So, with this argument we are now, we are now  
+showing that the size grows fast. And if the size  is exponential in h, if I turn it around then it  
+means that h is logarithmic in the size. So, if n  is the size then n will be exponential in h, so h  
+will be logarithmic in n, that is what we want. So, this justifies mathematically why  
+height balanced trees are of interest  to us. If we can maintain height balance   then we can actually get logarithmic height trees.  And if we can get logarithmic high trees as we saw  
+all our operations on search trees  will be proportional to log n.  
+Correcting imbalance
+So, the difficulty is that  this balance gets disturbed   when we change the tree. So, how much  does it get disturbed and what is the  
+measure of imbalance? So, from a natural  perspective supposing somebody holds up a balance,  
+as we said, with weights, and it is not  balanced, then it will tilt to one side.  
+So, let us try to quantify this slope. So, let us say that the slope at a node is  
+the difference in the height between the left  and the right. The slope could be now positive   or negative because it is not the absolute  value. It is saying take the left height  
+subtract the right height. If the left height is  more you will get a positive value, if the right   height is more you will get a negative value. So, our definition of height balance says that  
+these two quantities cannot differ by more  than 1. That means the, the slope can be 0  
+if they are both equal or it can be plus 1  or minus 1 depending on which one is more.   So, there are only three legal values allowed  for the slope of a node in any balanced tree.  
+Now, what happens when we insert or delete  a value with respect to a balanced tree? So,  
+if we insert a value, so remember that I could  have a tree which looks like this. And supposing  
+this has slope plus 1. So, the left hand side  is already more than the right hand side by 1.  
+And remember what insert does. It walks down  until it finds a leaf where it cannot locate  
+the thing and then it sticks a new value there. So, it will now increase the height perhaps of the   longest path on the left by 1, and so the slope  will go from plus 1 to plus 2. And the same thing  
+could happen on the right hand side. Instead of  this if it had been minus 1, it could have been   that I come here and add something and it becomes  minus 2. So, insert can clearly make something go  
+from plus 1 to plus 2, or minus 1 to minus 2.  And delete can do the same thing in reverse.  
+So, supposing this is already plus 1,  and then I delete a node here and this,   this three actually shrinks. Then the tree which  had a plus 1 balance becomes plus 2 because the  
+shortest side is shrunk. So, in general if we try  to arrest this imbalance as soon as it happens  
+then I claim that the only slopes  that are of interest to us,   which are outside the balance range are  plus 2 minus 2. It cannot be worse than that  
+because I have only deleted or inserted one node  at this point so the height has not changed.   So, notice that that is all that happens if you  go back and look at the search three things. It  
+either increases the length of a path by 1 or it  decreases by deleting the maximum, it deletes one,  
+one path by 1. So, how do we fix this balance? So, the general way to fix this balance  
+is by moving things from one side to the other.  There are too many things on the left, you move   it to the right. There are too many things on the  right, you move it to the left but you have to do  
+it in a sensible way to respect the search tree  property. Remember, the search tree property says   that the root must be in between the values  on the left and the values on the right.  
+So, let us first look at the case where there is  too much on my right. So, the right has a height   of h plus 2, so this is where we have a slope of  minus 2 technically because the left minus the  
+right. The slope is minus 2. So, I have too many  nodes on the, I have too long a path on the,  
+on the right sub tree. So, I want to  bring things from here to here.  
+So, in order to do that what I will do is I will  first expand this tree. So, notice that this has   height of at least 2 because h plus 2, h can  be at, at least, cannot be smaller than 0. So,  
+there are at least two things, so there is  at least one node, and then one more node.   There is at least two nodes on that path there. So, I can fill up, pick out the root of this and  
+then split it into two parts. So, if I  expand this, what I mean by expand is,   I focus on the root of this, the left, the  right child of the original node, which I will  
+denote with this diamond symbol to, so the diamond  symbol is a different value from this dot symbol.  
+I do not know what they are but I know that  the diamond is a bigger value than dot.   So, what do we know? We know that everything  here is smaller than the dot, everything here  
+is smaller than the diamond bigger than the dot,  everything in R is bigger than the diamond. So,   I have three different groups of values. So, everything in the leftmost tree is smaller than  
+everything, everything in the L tree is  between the dot and the diamond value,   and everything in the R tree is bigger  than both the dot and the diamond.  
+Now, I want to transfer something from  here to there, but I want to do it in   a kind of local way. I do not want to go down  and move things around. So, I want to do some  
+surgery at the top of the tree. So, the  surgery at the top of the tree will   mean that I am actually going to take  this and kind of make it like this. So,  
+let me just draw it properly. So, this is my rotation. So, I have taken this   and I promoted this to the root. Instead of being  the right child it now becomes the root. So, what  
+was the root now becomes a left child. So, that  is my rotation. But now I have to make sure that  
+all these other values are in the correct place  and I want to do a minimum amount of work. So,   remember that this was to the left of everything  so it remains to the left of the black dot. This  
+was bigger than everything so it remains to the  of the diamond. And this was bigger than the black  
+dot, and smaller than the diamond so now it is  smaller than the diamond bigger than black dot.   So, by just keeping track of the original property  of what these values had with respect to the nodes  
+above, you can figure out where to do this. And  as we will see that this rotation actually is very  
+easy to implement because I just have to change  some left-right pointers at the top of the tree.   I do not have to go deep into the tree to, so I  only need to do a constant number of changes.  
+So, this is a left rotation.  I take things from the right,   and I kind of, I kind of rotate the tree. But in  the process some big chunk from the right actually  
+comes to the left. It is not just at the top, but  some stuff from the right also comes to the left.  
+And of course, what happens here, if  you now look at the slopes carefully,  
+let us try to analyze what has happened. So, first  of all we said that there was a difference of 2.  
+So, let us assume that the  left was h, then the right   must be 2 more, exactly 2 more because that is  the only case you are interested in, so h plus 2.  
+If this is h plus 2 then something below  it, below this must be h plus 1.   So, this says that either the left tree is  h plus 1, or the right tree is h plus 1 or  
+both. And because it is balanced they must be at  least h. So, it says either I could have h plus 1,  
+h plus 1, both are h plus 1 therefore the  diamond is at h plus 2. Or I could have h and h  
+plus 1 so that the diamond is still at h plus 2  but it is balanced so there is a difference of 1   or it could be the other way. It cannot both be h, but just for  
+conciseness I have written it like this  but this, this plus this is not possible.  
+I cannot have, I cannot have a situation where I  have this and this. So, that is not allowed.  
+So, now when I move these things, of  course I am not destroying any nodes. So,   the nodes are still the same. So, this tree  is unchanged, so this remains of height h.  
+And these trees are also unchanged. So,  what is the worst that could happen? The   worst that could happen is that this  actually was h, and this was h plus 1.  
+Remember, either possibility was there. So, if this is the case then this is at h plus 2.  
+And so this thing has actually gone to  something which has a bad slope. So, this is,  
+from here it is coming as h, so the difference  between the right and the left is actually plus 2.  
+So, it has gone from minus 2 to plus 2. On the other hand, the good case is that this was  
+h and this was h plus 1. If this is the case then  both of these are h. So, this is a tight h plus 1,  
+but this is also a tight h plus 1, so I  actually have a 0. So, I could have a 0,   and if now both are h plus 1, then I will  have plus, I will have h plus 2 here,  
+and h plus 1. So, I could have any of these. And  remember I have gone from minus 2 to plus 2.   So, on its own a rotation need not fix the  imbalance. We will see that you can combine  
+rotations to fix imbalance. So, this is a left  rotation. I take things from my right sub tree   and move it to the left because the right has too  much. I could do the same thing the other way.  
+So, there is symmetric right rotation which takes  things from the left and moves it to the right.   So, now my left is too, too tall, and I want to  move things to the right. So, again I expand the  
+left exactly as I had done before for the right.  So, this is a completely symmetric operation. Now   I am going to take things from here to there. And  again I observe that this is extreme left, this is  
+extreme right, and this is in the middle. So, after I move it by the same argument  
+what will happen is that this remains to the  left of everything, and this remains to the right  
+of everything, and this will come now between  these two nodes. So, it comes to the right of   the diamond and to the left of the black dot. And by the same argument I started with a plus  
+2 slope, and in the extreme case I  might end up with a minus 2 slope   because this could be h and this could be h  plus 1. So, this could be at height h plus 2.  
+Or I could get a zero slope or I could get a minus  1 slope. So, we have these two rotations. They   are symmetric operations, they are exactly the  same except they go in opposite directions.  
+So, let us see how to implement it.  So, this is now the left rotation,   the first one that we saw. So, we want to take  this and go there. So, we are going to rotate  
+Implementing rotations
+at this point. So, this is my self. I am  applying the rotation at this node marked v.  
+So, what I am going to do is I am going to create  a new node here, and I am going to copy v there,  
+and I am going to promote, so I am going to  basically do some surgery on this tree.   So, I am going to create a new left child. And  what am I going to put there? I am going to  
+put this value v. So, how did I get the value? I  first said what was the value that I started with,  
+so that value, this is a little bit like  inserting at the beginning of a linked list.   I am going to copy the value that I have one  position down. And then I have to now take  
+these three trees and put them in the place. So, I have a left tree, this is tl, I have a  
+right left tree, that is if I go right and  left, and I have a right right tree. So,   I have these three trees. And of course I have  a value there also which I have to preserve.  
+So, finally what I end up doing is I cannot change  my current node. This is the basic principle. I   cannot change the node that self is pointing to.  So, I have to copy whatever vr has into self.  
+So, I am going to have self-dot value has to  be the value of vr. And I have to set its left   and right correctly. Its right is going to  be whatever it already was, which is the  
+right tree that the node was pointing to. The  left is going to be what it already was, which is  
+this one, this is the new node.  And the new node now has on its  
+right this tree trl which was already. So, so I am just doing, now notice that this  
+is a top-level constant number of operations. I  am I am doing some five assignment statements,  
+then I am creating a node and I am doing  some four more assignment statements. So,   it does not, it does not matter how big the tree  was underneath. I am only doing some surgery at  
+this top level. I am only interested in exploring  the top level of this tree and making some local,  
+local choices. So, this is a constant overhead.  Making a rotation at the root of a tree  
+takes a constant amount of time independent  of how big the trees actually is.   And of course now you can obviously imagine that  the right rotation is symmetric. So, I copy the  
+current value as v. Now, I take the value from my  left and keep it as vl, and then I create a new  
+node to the right, so this is this new node, and  then I populate it with my current root value. And  
+then I put the right trees, I hang off the trees  correctly. So, I take this tree and I hang it off   the root, I take this tree and I hang it to the  left of this, and I take this tree and I hang it  
+to the right of this. So, this is the rotation. So, rotation is very easy to implement given our  
+existing python description of the tree as a  class. So, that does not take any effort at all.  
+So, what we have seen is that you can take an,  a tree with balanced plus 2 or minus 2 and we  
+can do some rotation and transfer the balance  to the other side. It may or may not fix it.   So, now we need to make sure that we fix  it. So, we now want to use this to actually,  
+so rotation so far is not itself a balancing  operation. It is a basic block for balancing.  
+Rebalancing, root has slope +2
+So, let us see how to rebalance. So, remember that the only two situations   that we will ever rebalance are when the node is  plus 2 or minus 2 because we are rebalancing at  
+every point. We are never allowing the balance  to become worse than plus 2 or minus 2. So,   it was previously plus 1 to minus 1 in that  range, and we did one insert or delete and  
+something must have changed so it might have  become plus 2, might have become minus 2.   So, let us look at the plus 2  case. So, in the plus 2 case  
+the left hand side is bigger than the hand  side. So, since it is plus 2, we must have  
+something here overall. If this is h  this left-hand side must be h plus 2.  
+So, as before we have expanded this h  plus 2 with this diamond as the root node,   and now I am going to look at the slope at  this point. The slope at this point is plus 2,  
+that I know. What is the slope at the diamond? So, the slope with the diamond now, can it be  
+something other than minus 1, 0, 1? Well we are  going to argue that it cannot happen because we  
+are always going to ensure that, I mean we will  see that this rebalancing happens in such a way   that when I am touching a node and trying to  rebalance it, we can assume that its sub trees  
+have been recursively rebalanced because remember  that all our updates happen recursively.  
+So, what we will see that every time we make an  update, we rebalance. So, at every point below   we have already rebalanced before coming here.  So, that is what we have to keep track of. So,  
+we can assume that this tree, capital L, and  the street capital R are already balanced.  
+So, now we have to look at the slope,  as I said, of this diamond node.   So, what are the possibilities? It is going  to be either 0 or plus 1 or minus 1. So,  
+I am going to consider first the case where  it is not minus 1. So, either 0 or plus 1.  
+If it is 0 or plus 1, remember that this whole  thing has to have h plus 2, so one of these two  
+things has to have h plus 1. And it cannot  be only the right-hand side because then the   slope will become minus 1. So, the left-hand  side must be h plus 1, it cannot be h.  
+The right-hand side could be h or h plus 1. If it  is h I have 1, if it is h plus 1, I have 0. So,  
+this is a concrete picture that we have under  the assumption that the root node, that black dot  
+has a slope plus 2, and the left child, the  diamond node has either 0 or 1 as its slope.  
+So, now I want to rectify this using  those rotations that we have just seen.   So, it turns out that here a single rotation  is enough. And what does that single rotation  
+do? Well I just rotate at the top. So,  I will basically, if I erase all this,  
+I am applying essentially a right rotation at  this node. And that is exactly the rotation  
+that we saw earlier. We will take the diamond  node and we will hang that, this node off it,   and then this right tree will remain there, this R  tree will come here, and this L tree will be here  
+because that is the the relative values of L, R  and that original tree on the right are like this.  
+So, this is what we get. So, we get this tree here.   So, now, what we can see now is that the height  here is positively h plus 1. The height here could  
+be h plus 1 if I only look for this, but it could  also be h plus 2 because this is h plus 1 plus 1.  
+But in the worst case it is h plus 2. It cannot  be more than h plus 2. So, the slope of this node  
+now, this, this node which came from the left,  this value that came from the left, it is either  
+0 or it is minus 1 because it is 1 less on the  left than on the right. But it is within range.  
+So, all the nodes, you can see, are balanced  because everything below this is definitely   balanced. And this node is balanced because  it is either plus 1 or 0. Either the right,  
+this three named R is either h plus 1  minus h plus 1 or it is h minus h is 0.  
+So, if I have the, going back  if I have the diamond node  
+having a slope of 0 or 1, a single rotation  at the top fixes the problem for me.  
+Unfortunately, if it is a minus 1  it is a little bit more tricky.   So, supposing the slope here is minus 1, then I  know for sure that this must be the situation.  
+This has to be h plus 1 and this has to be  h because I need to get a height of h plus   2 at this point. The only way I can get a  height of h plus 2 at that point is to have  
+1 h plus 1 child, either left or right, and I  know which one it is because the slope is minus 1.  
+So, since this is h plus 1, I will expand this  tree. I am going to expand this tree now.  
+So, I am going to redraw this tree and say  that under the, this thing there is a star  
+that is a third node which I have kind of  pulled out. So, I am explicitly extracting   the root of that tree. And it has these two  sub trees which I am going to call X and Y.  
+So, this together, this whole thing before  was what I had called R, the capital R. So,  
+this whole thing together was earlier this capital  R. So, I have taken this capital R and decomposed  
+it into the root and there is two sub trees. So, this whole thing before was h plus 1.  
+So, so this should be h or h minus 1. So, at least  one of them has to be h but the other one could  
+be h minus 1, but not both because if this whole  thing is h plus 1 then one of these two trees must  
+be of height h. So, now I take this thing and I  expand it and I have rotated it at this point.  
+So, I take this sorry and I rotate it here. So,  originally my balance, the problem is here. But  
+I am not going to the root at all. I am doing it  at a lower level. So, I am first rotating the left   sub tree of the root. So, I rotate it this way.  So, again, remember that this must be h minus 1.  
+It does not matter as we will see it will  work out okay. So, now we have this situation.  
+So, in this situation I still am not promised  something because I could have an h plus 1,  
+and so I could have an unbalanced  situation because of h, sorry,   so this could be at h plus 1 and this could be  at h plus 2 and I know that this is at h.  
+So, the situation here could still be bad in  the sense that it could still be a situation  
+where I have a plus 2 at this point. I have not  changed the imbalance at that point by doing this  
+rotation inside. But now I will do that previous  rotation. Actually now it turns out that I am in  
+this case with respect to the star node. So, if I do one more right rotation,  
+then you can see that either everything  is h or I have h and h minus 1. So,  
+basically these two nodes are balanced because  they have either 0 or plus 1 minus 1 slope,  
+and these two nodes are at the same  height so this node is balanced.   So, in case I have one situation as single  rotation suffices, and other situation two  
+rotations suffice. So, the rotation on its  own, as I said, does not fix the balance. But   by combining the rotations cleverly you can always  fix this thing in a constant number of operations.  
+Remember, each rotation took a few reassignments  of the nodes near the top of the trees.  
+So, this was for the plus 2 case, and  we saw that everything is symmetric. So,   here we did a right rotation and left rotation,  there you do a left rotation, right rotation. So,  
+it is the same thing but you just do it  symmetrically. So, if you can do plus 2,   you can do minus 2 by just applying the  rotations in the opposite directions.  
+Update insert() and delete()
+So, how does this all fit together?  Well we, we saw the code for rotate,  
+and what we described now is a procedure of how  to apply this rotate by looking at the slope.   So, if you combine it, I have not shown the  code, if you combine it, you can combine these  
+rotations judiciously so that when you have slope  plus 2 you can make it back to a normal slope,  
+and when you have slope minus 2 you can make,  by doing the rebalancing appropriately.   So, we can assume that we can take those rotations  and stick them together in the correct sequence  
+to always take a node and rebalance it whenever  the slope is outside the permitted range. So,  
+our goal therefore, is to keep it  always within the permitted range. So,   what we have to do is go back and check the  code that we have that modifies the tree.  
+So, what is the code that modifies a tree? Insert  and Delete. So, wherever we modify the tree that  
+sub tree must be rebalanced. So, if you remember  Insert, it said okay, if it is empty then I create  
+the value here which is not a problem because that  is a balanced tree because it has only one node.  
+And of course, if I find the value I am not making  any change. If I go to the left and I insert it,  
+then potentially I have to rebalance it. So, after I insert on the left-hand side,  
+the left-hand side might change and therefore I  will re, rebalance it. Now notice that this node,  
+so I am going here and I am saying  rebalance this thing, but the, the  
+Insert could have come to me from above. So, it  will now, at the next level, ask to rebalance  
+this node. So, that is what I meant by saying  that this rebalancing happens bottom up.   So, when I change something to my left I ask my  left to change itself, to rebalance itself. Now,  
+when I return the value back up, the parent who  has delegated this Insert to me is going to ask  
+me to rebalance myself. So, I will get  rebalanced after my child is rebalanced   and therefore this rebalancing of assumption that  the rebalancing is working bottom up is validated.  
+And the same thing holds, of course, when  you do the right-hand side. If you insert   on the you do a right rebalance. And similarly, when you do a Delete,  
+there is the empty case which we do not have to  worry about, but if you delete on the left you do,  
+should be left, if you do delete on the left you  rebalance on the left, if you delete on the right,  
+you rebalance on the right. Now, notice  here when you delete the maximum on your   left sub tree that will in turn create its own  rebalancing. So, you do not have to separately  
+rebalance it. It is only when you kind of  do it yourself that you have to do it.   So, all this requires one extra step which  we have kind of not looked at very carefully,  
+Computing slope
+which is we need to determine the slope in two  senses. First of all we need to check when we  
+rebalance whether we are in the range of plus  2 minus 2, otherwise nothing is to be done.   And even when it is plus 2 or minus 2 remember,  we have to look at the child and decide whether  
+its slope is plus, 0 plus 1 or minus 1. So, we  have to repeatedly find the slope of a node,  
+and the slope of a node we said is determined by   computing the heights of the two  children and taking the difference.  
+So, this is the Python code which expresses what  we said at the beginning that the height of an   empty tree is 0, and the height of non empty  tree is 1 plus the height, maximum height of  
+its children. Notice that this also takes care of  the leaf because the leaf will be 1 plus the two  
+children which are empty trees. So, it will be 1  plus the maximum of 0 and 0. So, the height of a   leaf will turn out to be 1 as we would expect. So, the problem with this particular thing is that  
+in order to compute height we have to go  down the whole tree because I have to look at   the left sub tree and the right sub tree and in  turn when I look at the root of the left sub tree  
+it will look at its left sub tree and right sub  tree. So, in fact every height computation will  
+traverse all the nodes. It is not like Find or  Insert which says either go left or go right.  
+All our search tree operations so far were clever  in the sense that they never went down both paths.  
+Either it said go down the left path or it  said go down the right path, but never both.   But this is now requiring me to go both ways so it  is going to be actually an order n operation.  
+And this is going to kill me because even  though the final product is something which is   balanced, if I am doing order n work  each time in order to find the slope  
+and rebalance it then my rebalancing is  already a linear operation. So, I am   going to do n into n, n squared operations  at the minimum across my entire work. So,  
+we cannot afford to do this. So, we  must do something more clever.   So, the solution is to say that I do not need to  compute the height because I can incrementally  
+update the height whenever I change things  around. So, what I do is I actually keep,  
+in addition to value, self-dot  value, self-dot left, self-dot right,   I keep an extra field called self-dot height.  And self-dot height basically can be updated by  
+taking the maximum of the left and the right.  So, so do not, it is, this is not definition  
+of height. The definition of height is just  to return self-dot height. But whenever I   do an update this is what I need to do. So, if you look at the update for instance,  
+so whenever I rebalance, and the heights  have possibly changed I will update my height  
+and incrementally and inductively I assume  that my children have adjusted their heights.  
+So, their height field is correct. So, I can just  look up the height that my left child reports,  
+and the height that my right child reports,  and add 1 to the maximum of these.   I do not have to recursively go down because  inductively every node has maintained its  
+height in this local variable. So, by keeping a  local variable height I am able to keep track of  
+the height as we go along without recomputing  it wastefully going up and down the tree. So,   this is the extra trick that you need in order to  make the rebalancing work, is to keep the height  
+explicitly recorded as part of the node  along with the value of the left child   and the right child. So, there is an extra,  local integer that you have to keep.  
+Summary
+So, what we have seen is that these binary search  trees which we introduced as a two-dimensional  
+data structure to keep track of sorted values  which are changing with Inserts and Deletes can  
+be kept balanced by doing these local rotations.  So, by combining these rotations judiciously and  
+by keeping track of the slope we can actually  keep a height balanced tree, and we prove that   height balanced trees are good enough. A height balanced tree is weaker than a size  
+balanced tree but it still has the property that  the size overall is exponential in the height,  
+or the height is logarithmic in the size. So, this  guarantees that whenever I do Find, Search, or  
+Insert or Delete which walks down a single path in  the tree that cost is never more than logarithmic  
+in the number of values that I am maintaining. So, overall, I get this, over a sequence of n such   operations, no matter which of these operations it  is, it is not going to cross n log n. So, that is  
+the beauty of balanced search trees. These are not  the only, so height balanced trees, I should again  
+remind you, are not the only way to keep balanced  search trees. There are many other types of  
+ways of keeping balanced search trees which you  can read about if you look at algorithms books.   But this is one of the simplest ones  to explain and you can see very readily  
+why it maintains the balance and why this  balance gives you this logarithmic height.

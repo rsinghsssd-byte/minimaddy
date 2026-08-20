@@ -1,0 +1,210 @@
+So, we will now turn our attention to  a technique called dynamic programming.  
+So, let us go back to the kind of recursive  functions that we have been writing.  
+So, typically recursive functions arise from  inductive definitions. So, for instance,  
+we can define factorial inductively. By  defining the base case the factorial of 0 is 1.  
+And for arbitrary n bigger than 1, the factorial  of n can be got by multiplying the recursive  
+call factorial n minus 1, so inductively, we know  how to compute that, and multiplying it by n.  
+We can also do this for structures, so we can do  induction on the structure of a list. So, we can  
+say that if we want to do for example, insertion  sort, then for the empty list, it is already  
+sorted. So, the insertion sort of the empty list,  so this is like the 0 case is just the empty list.  
+And if we need to sort a list from with X0 to Xn  with n plus 1 elements, then what we can do is  
+we can sort the first n elements inductively.  So, we do insertion sort on X0 to Xn minus 1,  
+and then we insert the last element into this. So, insert is a separate function which is like,  
+so it is like multiply, so it is a  separate function that we use to combine  
+the inductive case with the element which we are  currently dealing with. You can also write insert  
+inductively, but we will not bother about that for  now. So, once we have these inductive definitions,  
+then when we write code for this, then they  naturally become recursive functions.  
+So, the factorial function will  say, if n is smaller than 0 or less,  
+return 1, otherwise return n times factorial  of n minus 1. Similarly, the insertion sort  
+function will say that if the list you are given  is empty, then return that list. Otherwise, insert  
+into the list up to but not including the last  element, insert the last element. And then,  
+so you assume that this is sorted inductively  or recursively and then you insert.  
+So, this is how it works when we have inductive  definitions, we get recursive programs.  
+So, the reason that this works in general is that  we have these sub problems. So, we have these sub  
+problems and we are combining these sub  problems to solve our original problem.  
+So, for example, when I look at factorial of n,  then I need to solve the subproblem factorial of  
+n minus 1, but factorial of n minus 1, in turn,  will ask me to solve the problem of factorial n  
+minus 2. So, all the smaller versions of  factorial n minus 1, n minus 2 up to 0,  
+are all sub problems of the problem I am going to  solve now. And once I can solve them, I can kind  
+of bring them together and solve this problem. Similarly, if I want to sort a list,  
+I will have to do by insertion sort,  then I will have to be able to sort  
+that prefix from 0 to n minus 1. So, if I sought  from 0 to n minus 1, then I can start from 0 to n,  
+but in general, I might end up having to sort  different segments, so I should think about any  
+sequence Xi to Xj as a sub problem of this. So, now, let us look at this sub problem situation  
+in a different context. So, remember,  this interval scheduling problems. So,  
+the interval scheduling problem is something we  encountered when we looked at greedy algorithms.  
+So, we said that we had some resource. For  example, we said there is a video classroom,  
+which is going to be used by a number of faculty  members, and each faculty member has a fixed slot,  
+so they have a time period when they would like to  use the classroom. But since no two people can use  
+the classroom at the same time, we have to choose  a subset of slots to schedule during the week.  
+And in the interval scheduling problem  our criterion was to keep the maximum  
+number of people happy. So, we wanted to  satisfy as many requests as possible. So,  
+we wanted to choose a subset of bookings, so  that, the number of teachers who got their booking  
+was maximized. We were not concerned about  for example, maximizing the utilization of  
+the room in terms of the number of hours  of recording or something like that.  
+So, here we have subproblems. So, each subset  of bookings is a sub problem. And we have this  
+greedy strategy, which says, pick based on some  criterion, the first request to schedule. And  
+once I schedule that request, there are some other  requests which overlap with it, because they have  
+the starting time or ending time is such  that I cannot schedule them both together.  
+So, I have to remove those. And once I remove that, I get  
+what remains, and that is a subset of the original  problem which I have to solve. So, that is why  
+every subset in general is a sub problem.  So, this is also there. So, this kind of  
+inductive structure, though we did not use  an inductive solution in the greedy thing  
+there is an inductive thing going on. That  is in order to solve the whole problem, I  
+take something out and then I solve a  smaller version of the same problem.  
+So, each subset is a small, is a sub problem.  Now, of course, since subsets are exponential,  
+if I have n bookings, there are 2 to the  n subsets that are in principle 2 to the n  
+different subproblems. So, ideally, I would need  to look at all of these subsets. So, every subset  
+tells me something about how it can be solved  and I would have to look at the best of these.  
+But the reason that the greedy strategy  is attractive is that it does not look  
+at all of them it only looks at a fraction of  subproblems. But along with this, we have this  
+side effect that every choice that we make  rules out a large number of subproblems,  
+so we need to make sure that the optimal solution  we are looking for has not been ruled out  
+by looking at by making a poor choice. So, whenever we make this kind of a greedy  
+strategy, then we need to prove optimality.  Because we cannot be sure otherwise,  
+that the choices that we have thrown away, are not  going to be bad. So, we saw that there were many  
+kinds of incorrect greedy strategy for which we  could explicitly come up with counter examples.  
+Just because you cannot come up with a counter  example does not mean that the greedy strategy  
+is correct. So, you must necessarily prove that  it is correct. And we gave some arguments for  
+it. We talked about exchange arguments or showing  in this case that the interval scheduling using  
+the greedy strategy always stays ahead  of the optimal schedule, and so on.  
+So, let us look at now a variant of this  problem. So, remember, we said that in this  
+interval scheduling problem, we are only  interested in maximizing the total utilization  
+in terms of the faculty. We want to keep as many  people happy as possible, but we are not looking  
+at any resource in terms of the room utilization.  But supposing we are getting something from the  
+room. So, let us assume, for instance, that this  is actually not a captive resource inside IIT  
+Madras, but it is a commercial facility. So, in a  commercial facility, so you charge rent for usage.  
+So, each person who makes a booking is willing  to pay a certain amount of money. So, there is  
+a certain weight associated with the booking. It need not just be the length, it could also be  
+some people for have an urgent requirement, they  are willing to pay more. So, for each request,  
+there is also a weight. You can think of  it as how much money you are going to earn,  
+if you satisfy that request. But the constraint  is still the same. That is these requests are  
+fixed in time, they must be from a starting  time to an end time, they cannot shift.  
+And you cannot have two overlapping  requests at the same time.  
+So now, our goal becomes different. We are no  longer interested necessarily, in keeping the  
+maximum number of customers happy, rather, we  are interested in maximizing our revenue. So,  
+as the owners of this facility, we would like  to maximize the total weight in this case,  
+the total income that we get as  rent from renting out this facility.  
+So, if you remember the greedy strategy that  we had for the earlier question, which is to  
+maximize the number of users who use it, we said  that you just take the earliest deadline.  
+So, you look at the first job that is going to  finish and schedule it first, knock out all the  
+jobs which overlap with it. Now among those that  remain, you take the first job that is going to  
+schedule it and so on. So, we had this earliest  deadline or the earliest finish time as our greedy  
+strategy. But it is quite easy to come up with  a weighted example where this does not work.  
+So here is a trivial case. So, I have  three requests, two of them have weight 1,  
+and one of them has weight 3. So, it is  very clear that the best choice for me  
+is to use the job or to schedule the job,  which is weight 3. Now, if I were just  
+trying to maximize a number of customers, as  before, I would take this one and schedule it.  
+And then this would mean that this goes out.  And then because the other one starts later I  
+would schedule that. So, I would get two happy  customers, but my revenue would be only 2.  
+Whereas if I did not go by the earliest deadline,  but somehow were able to take into account the  
+weights that I had, then I would actually prefer  to take just as one customer who is willing to  
+pay three units, and thereby get more than I  would get by servicing the other two customers.  
+So, this earliest deadline is no longer a valid  greedy strategy if I add weights, and I now want  
+to maximize the weight of the schedule. So, what should I do? So, can I look for a  
+different greedy strategy? So, I can start  looking saying, okay, maybe I do not want  
+to do this, maybe I want to find now. Remember  earlier also, we talked about the longest job, the  
+shortest job, there were various other parameters  that we use, so we could now also look at the most  
+revenue earning job. Maybe we want to make  that a priority or we can take revenue into  
+time or revenue divided by time. There are many, there is no shortage  
+of these kind of metrics that you can use in  order to evaluate jobs. And then whichever  
+one we choose, we either have to search for  a counterexample or prove that it is correct.  
+But the other way, which is more  reliable, is to actually somehow  
+exploit the fact that we have the subproblems  so this is no different in a way from factorial  
+or insertion sort or something? So, the solution  to the original problem depends on subproblems.  
+So, can we take those subproblems and build up  a solution to original problem exactly as we do  
+there. So, can we find kind of inductive structure  to this weighted interval scheduling problem?  
+So, here is a way to do that systematically.  So, let us just arrange the jobs in some natural  
+order. So, we can say we can arrange them by their  starting time. So, remember, every request has a  
+starting time and an ending time. So, B1 is the  first starting time B2 is a second starting time  
+and so on. Of course, they could have multiple  jobs the same starting time, in which case we  
+will order them in some reasonable way, but let  us for convenience assume that our n requests  
+have n different starting times and B1 to Bn  represents the order of the starting times in  
+increasing order. So, let us look at B1.  
+So, what happens with B1? Well, I do not know  the solution, but I know that either B1 is there  
+in the optimum solution or there is an optimum  solution without B1, there are only two choices.  
+Either I can find an optimum solution with  B1 or if I take B1, I am not going to find  
+an optimum solution. So, then I will explore both  the possibilities. So, I will say that either B1  
+is part of an optimum solution or it is not. So, let us assume that it is part of an optimum  
+solution, then it will rule out  things, which overlap with it.  
+And these things overlap with it will come in  sequence because the starting times is in an order  
+so maybe B2 overlaps maybe B3 overlaps maybe B4  is the first job which starts after B1 finishes,  
+and if B4 starts after B1 finishes, so  does B5 because B5 starts after B4.  
+So, there will be a certain number of  jobs B2, B3 maybe which get ruled out,  
+so now I will have to solve the remaining  problem in this particular concrete case  
+for B4 onwards. So, if I include B1, then I must  kick out B2, B3 and go to B4. On the other hand,  
+if I do not include B1 then I just knock B1 out,  and I have a resulting problem, which has B2 up  
+to Bn. So, these are now my two subproblems. And now what do I not need to do? I do not know  
+which one of these is the correct answer. I do  not know whether I should have kept B1 or I should  
+have dropped B1 but let us assume inductively  I can solve these smaller subproblems. So,  
+we have solved the smaller subproblems, then I can  just take the maximum of the two in the sense that  
+if I include B1 I get the revenue from B1 plus  the whatever I have solved, if I exclude B1,  
+I get the revenue for whatever else, but I do  not get the revenue of B1, whichever of them  
+gives me more revenue more weight I use that. So, this is a kind of exhaustive solution, which  
+in some sense is guaranteed to be correct.  Now, why is it guaranteed to be correct?  
+Because it does not rule out any possibility  upfront. See, the greedy solution when I make  
+a choice, it rules out a bunch of things which I  will never going to look at before look at again,  
+this is not like that. So, if I generalize  this argument for B1, if I look at any Bj  
+any job in this sequence, either it is part of the  solution or it is not part of the solution.  
+So, in particular for B1 we have checked both  cases. So, B1 we have checked the case that  
+it is there it is not there. Now, what about  B2? Well, B2 if it is not in conflict with B1  
+will be there in this list and in  this list. So, whether I include B1  
+or exclude B1, I will look at a next choice for  B2, I will either include B2 or exclude B2. So,  
+I will consider it in the subproblems involving  B1 and the subproblems which exclude B1.  
+On the other hand, if B2 is incompatible with B1,  then it would not be here because when I choose  
+B1 I have to throw B2 out, but it will be in the  second one by guarantee because if I throw out B1,  
+B2 still is possible. So, then I would check  if B2 is in conflict to B1 I would evaluate  
+all the answers for B2 assuming that B1 has been  discarded. So, by doing it in this sequence,  
+I know that if B2 is there B1 is not  there. So, there is no problem. So,  
+I am not ruling out the fact that B1 was there.  The only reason v1 is not there is because  
+without B1 I could not do B2. So, this  now becomes a kind of recursive thing.  
+I go to B3 and it has the same thing.  So, when I get to B3, either it has been  
+allowed by my previous choices or it has been  disallowed, but every situation where it is  
+allowed or disallowed will be considered.  I am not going to rule out anything.  
+So, what is the problem? So, here is a situation  that you might well have which is that B1 and B2  
+are incompatible. Let us look at the picture at  the bottom. So, B1 and B2 are incompatible, so  
+B1 and B2 overlap, but they are both disjoint from  what happens afterwards. So, B3, so remember these  
+jobs are arranged in starting time order. So, B1  starts before B2, B2 starts before B3 and so on,  
+but both B1 and B2 finish before B3 starts. So, whether I choose B1 or B2, I can  
+freely choose between B3 to Bn,  but I cannot choose both B1 and B2.  
+So, now if I start this exhaustive strategy that I  did before, what will happen is I will first look  
+at the case where I choose B1. If I choose B1 I  must rule out B2 and I must look at these things  
+or I will exclude B1. And If I exclude B1 then  this is gone and I am looking at these things.  
+So, these are the two sub problems in  this concrete situation, which arise  
+by making my first choice. I keep B1, I drop B2, I keep drop B1,  
+I keep B2 and in both cases I keep B3 to Bn.  So, now, let us look at a case that arises  
+here. So, this is it should be B2. So, let us  look at the case that arises in the second case.  
+So now in the second case I have B2 to Bn and  now I must now look at the situation where I  
+am allowed to choose B2, whether I should keep  B2 or not. So, once again, just like B1 was the  
+first choice in this choice B2 to Bn I must  decide whether to keep B2 or exclude B2.  
+Now, if I keep B2 or I exclude B2, I still  have B3 to Bn, because I know that B2 is  
+compatible with B3 to Bn, but this B3 to Bn  that I am solving here, was already being  
+solved in the case where I chose B1. So, this  is the challenge. The challenge is that when I  
+apply this inductive strategy in this way,  when I break down the problem into subproblems,  
+I cannot be guaranteed that the problem that  arises from one path, the path that came from  
+choosing B1 is different from the one that came  from keeping B2 or excluding B2, so the same  
+sub problem in this case B3 to Bn  might arise from different paths.  
+And if I use recursion, as I  had done. When we said fact n  
+is equal to n times factor n minus 1.  Every time we saw an inductive dependence,  
+we just replace it by a recursive call. So,  what is going to happen in this case, is that,  
+we are actually going to evaluate this once when  I am solving for B1, and we are going to solve it  
+again for B2 which is clearly wasteful. Because  the same problem is being solved a second time,  
+because we somehow did not recognize that  this problem has been solved before.  
+So, the question is, whether we can somehow  flag this. So, we can somehow flag this problem  
+and say that okay B3 to Bn must be considered  once and not twice. So, if I have solved it once,  
+I should somehow recognize that I solved it again.  So, when I come back to this problem, later on,  
+I can figure out that this problem is already been  solved and I do not need to solve it again.  
+So, we will basically this is what dynamic  programming eventually achieves. So, we will  
+look at dynamic programming through a number of  examples and illustrate why this problem is really  
+bad. I mean, this problem is really bad, because  remember, we said that if you have n jobs, then  
+you have 2 to the n possible subsets. So, there  is really an exponential number of subproblems.  
+And if we are going to be solving them again and  again then we are going to be in real trouble.  
+So, this could actually blow up in terms  of a very simple recursive solution  
+that we get from an inductive structure, might  actually turn out to be impossible to compute  
+simply because of this overlap. So, unless  we fix this overlapping problem, what seems  
+to be a very simple problem to compute could  actually be computationally infeasible. So, we  
+will look at these two strategies. The first one  is basically, one, where we kind of remember.  
+So, we come to a problem and we say, okay, this  is a problem I have seen before, and I will just  
+reuse the answer I have done before, and the other  one is dynamic programming where we will say,  
+okay, I will solve the problems subproblems  in such a way that whenever I need one,  
+I will have the answer. So, this  will become clear, as we go along.

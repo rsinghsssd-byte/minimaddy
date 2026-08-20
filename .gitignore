@@ -1,0 +1,9 @@
+# Ignore environment variables (crucial for protecting API keys)
+.env
+
+# Python compilation files
+__pycache__/
+*.pyc
+
+# OS generated files
+.DS_Store

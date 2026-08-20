@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Maddy</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Highlight.js Light Theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- Marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>Mini Maddy</h1>
+            </div>
+            <select id="course-select" class="course-select">
+                <option value="PDSP2025">PDSP2025</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="chat-container">
+        <div id="chat-messages" class="chat-messages">
+            <div class="message assistant welcome">
+                <div class="message-bubble">
+                    <div class="message-content">
+                        <p>Welcome! I'm Professor Madhavan. Pick a course and ask me anything.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <div id="mode-buttons" class="mode-buttons">
+                <button class="mode-btn active" data-value="explain">Explain</button>
+                <button class="mode-btn" data-value="quiz">Quiz Me</button>
+                <button class="mode-btn" data-value="summarize">Summarize</button>
+                <button class="mode-btn" data-value="solve">Solve</button>
+            </div>
+            <div class="input-container">
+                <input type="text" id="question-input" placeholder="Message Mini Maddy..." autocomplete="off">
+                <button id="send-btn" aria-label="Send message">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

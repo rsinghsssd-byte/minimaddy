@@ -1,0 +1,479 @@
+okay uh sorry for the delay thanks chitra for the extremely generous
+introduction so uh I suggested uh at we to start with a wellknown person and
+then I was asked to the talk so so this is uh my uh reason for talk so I think
+[Music] in Computing and outside have come
+across at some point so it seems like a good place to start I must ad that I learn more about I the process
+of am of things in many different fields so I
+this exp have come across and may not have
+understood person behind you so uh let's start with
+[Music] some
+[Music] was Rel
+sence but [Music] after a large part of
+his what we call productive life and then in 84 we moved
+to a spent about 15 years and then back
+to years so these are just some backs
+so [Music]
+I for fundamental contributions to program as a high intellectual challenge
+for eloquent inist and practical demonstration that program should be composed correctly not
+just forting perception of problems at the foundations
+program so you get the idea something [Music] program but this is I think a very
+narrow view of what he did I to explain was a very important aspect
+for so if you want this list of Contrition
+in terms of areas and points what every
+[Music] undergraduate that
+he many people cly one things he most remembered
+for is this insistence on writing correct programs and in a way he can be
+seen as one of the p in software engineering he also designed one of the
+early operating systems
+important and if you ask that he is probably most long for in terms of his
+contribution to the community actually there's not even mentioned in
+this enough I
+think of [Music]
+course so perspective of course comes later at that time what was most prominent in his
+work Wasing and so so I through this of but
+not necessarily topic and
+justl his work and [Music]
+so he was very personality so lot of
+stories about by he veryable person he a lot of quable things some
+deep say so something like
+that so let's start with the that is probably most familiar to students of
+computer science which is shortest part I so this appeared in 1959 remember
+actually proba first work and two
+problems connection this and
+the basically
+find find the two points and
+[Music]
+theet points connected by lines and it might say from here to here it is so many kilometers and from here to here so
+single source shortest path
+many kilometers and now given this you want to compose CL these lines and find the shortest path from one place to another and one of the things he
+realized is that in order to do that you want to find the shortest path from where you're starting to everywhere because you have to go through various
+places to get there so the process of finding the shortest path to where you want to go involves in turn finding the
+shortest Paths of various places you have to go in between right so this became what is now known as the single
+Source shortest path problem where you compute the shortest path to everything now I'm not going to tell you how it did
+it but the point is that that is only one problem and this is a note on two
+problems okay so this is a note on two problems and this is the
+Dijkstras JavaScript
+paper okay so you can't read it but at least you can appreciate that it's about 2 plus Epsilon pages long
+right in fact if you can read this part somewhere here it starts with some remarks so
+actually the paper ends here okay and one page of this is the
+shortest path problem which are undergrad not able to understand even today right so it's amazing if you ask
+me so so this is one of the Hallmarks of dtra's style which is that he could
+write very complete and clear concise technical stuff in a way that's able one
+could understand without wasting a lot of space so the paper is over two pages long and the point is IT addresses two
+problems so actually the first page is not about Hest path the first page is about spanning
+trees so in actually dyra ReDiscover discovers what is now called the prims
+algorithm and if you actually study D algorithm normally you studyed before Prim algorithm and you say oh prim's
+algorithm looks like D's algorithm but actually for dyra it was the other way around he first presents prim's
+algorithm and then he extrapolates that to find shortest paths okay now it so turns out that Prim had independently
+done this uh 20 years ago and as we'll find out it's not surprising that dyar did not know about it but uh uh the
+point is that he did two things so the second page of the as well right so there are two plus Epsilon Pages the
+first page is prim's algorithm second page is dy shortest part algorithm and the third page is references so this is typical of the
+style of dyra and of course I think other than this there is nothing memorable that he has done in the
+classical framework of algorithms and complexity so this is kind of a an isolated Point sort of in his uh in his
+work but it's a very important point which many people especially many undergraduates come across early in
+their uh uh
+Algol
+study so a more uh long lasting and
+visible effort and contribution of dyra was uh programming languages so he was
+uh deeply involved in the design of this uh language called alol which went
+through various versions and the versions are named after the year in which they were kind of uh laid down so
+alol six was the first uh what you would call in modern parlance the first stable version of alcohol probably uh so the
+importance of alol was before alol you had languages so foran existed but there was really not much by way of high level
+programming languages and there was not much uh Clarity on what a programming language should look like right so if
+you look at alol 60 you see for the first time a programming language that looks like a modern programming language
+so if you look at any modern programming language by which I mean uh C C++ Java
+any of these kind of things the structure of these programming languages derives directly from the ideas which
+went into alol 60 right so you have blocks like begin end you know things are kind of in uh you have the ifs and
+whiles which have these blocks and then you have functions inside functions and you have some notion of where a function
+is visible in terms of the text you have lexical scope it also introduced other
+uh ideas which did not exist previously that you have to describe the language in a formal way so this idea of a
+grammar to describe the language so the famous bakas n form which is now very well realized as a standard way of
+describing programming languages actually was invented during the formulation of alol 60 so as I said dyra was part of a
+committee that worked on this uh probably this is something again I did
+Recursion
+not know until I prepared this talk one of the things that dstar is known for is to have actually sneaked in the idea of
+recursion into alol so see it's it was designed by a committee and programming
+was kind of new and recursion was a strange and scary idea so lisp existed but lisp was seen as a strange and
+unnatural programming language for geeks and real programmers could not make any sense out of it and so people were
+deeply worried about introducing recursion into a traditional
+language but on the other hand dyra was convinced that recursion should be there and there was a kind of private tussle
+between the people who are writing the report and then there was some Clause so
+it was like a this language was described like a whatever like a legal document 5.4.4 and 6.2.3 and all that so
+I think 5.4.4 in particular talked about what happens when the name of a program appears inside the name of a program and
+nothing was said so dyra said oh you know this thing is missing why don't you add the sentence that if you see the
+name of a program inside another program it means you start that program again and it appears the other people did not
+realize that this meant recursion right so they signed off on this and then after they were Furious to find out
+that they had actually introduced recursion into alol now uh not withstanding his victory on this front I
+think he uh did not have his way on other front so actually he refused to sign this uh I mean he refused to be an
+author of this so the actual alcohol 60 uh committee does not list exra as a member he did not sign off on this
+because he he deferred with some majority opinion it's not very clear to me exactly what he deferred with but it
+didn't stop him from WR wrting the first alol 60 compiler okay so he went back to his Department in Amsterdam and along
+with this other person Yap sonal he wrote the first alol 60 compiler right
+so so he was very much involved in this modernization of programming
+languages now as I said alcohol was a an evolution which went from one stage to another so now after alcohol 60 people
+started looking at you know improving in some sense alcohol and the next phase was something which came eventually 1968
+which was called alol 68 so by then there was this body called iip which had these working groups dealing with
+different aspects of computing and working group 2.1 was supposed to be uh doing programming languages and
+they were supposed to be uh redefining alcohol so Nicolas worth actually G came
+up with some ideas for alcohol which and then there was a competing design from some other person whose name I forgotten
+and unfortunately for Nicholas worth was uh the one who lost
+the argument so Nicholas Worth's ideas eventually became Pascal and uh which
+was immensely uh widespread say in the 1980s as a programming language and
+still persists in some places as a language for teaching programming I learned Pascal as my first uh
+programming language and I think it's still a good language to learn programming with so as a result what
+happened was that alcohol 68 so alcohol 60 despite his differences of opinion I think dyra secretly likeed the language
+alol 68 he could not stomach so as was his style right he
+doesn't keep quiet as we'll find out so he wrote a sort of an open letter and to
+the committee and published it I mean he wrote a letter and published it so that it was no longer a letter right so this
+is what the letter looked like right so I this this thing is I just wanted note
+so this is be a formal letter to the committee which designs a language okay and this is how he starts he says there
+are writings which are lovable although ungrammatical and there are other writings which are extremely grammatical
+but are disgusting this is something I cannot explain to superficial persons okay this
+is a letter written to colleagues like and and and Nicholas worth and people like that okay so this is what he
+calls the reader reaction and then what he calls a writer's reaction so if you have heard this this a wonderful song by
+Tom erer which says my tragic tale I won't prolong sing Rick TI tin my tragic
+tale I won't prolong and if you did not enjoy my song You've yourselves blame
+for if it's too long you should never have let me begin right so this is his preamble to this letter to this
+committee complaining about alol 68 and here are some of the comments he says he says the size and complexity of the
+defining apparatus you need terrify me okay this is an innocuous comment
+then he goes on to say being well acquainted is a kind of left-handed compliment being well acquainted with your
+Ingenuity I can only blame the language right the fact that you chose this language and not some other language you
+couldn't do anything better knowing how smart you guys are then he goes back remember the I
+working group 2.1 is created to for programming right so he said WG 2.1
+should return to its proper subject matter which is programming languages meaning to say that this last 8 years or
+whatever you've done is not programming languages okay so this is uh his take on alol 68 alol 68 was actually a a very
+ugly and unusable language with too many features and nobody could figure it out and it it never caught on okay so it was
+never actually made into a mainstream language nobody actually wrote programs in alol 68 but uh this was kind of
+typical of the way that Dyas interacted with the community even his peers around
+him okay this is very much his style so in a sense what this
+did uh indirectly okay so some have debated whether this is uh true or not but in a
+sense alol 68 convinced dyra that the problem is
+not in programming languages but in programming right so this is a quote so
+there was a committee which talked about this software engineering problem problem which met after that and one of the members of the committee
+summarized D's Point like this so this is just a quote he say the true problem is not is now the reliable creation of
+programs to perform specifi tasks rather than their expression in some language
+right so the point is no longer what the programming language is the point is what are you trying to do okay so he
+says he goes on to say I doubt if any programming language as the term was and still is understood would have satisfied him okay but the point is that this is
+kind of a in a way a transition point in D's thinking where he's not worried anymore about
+writing the perfect programming language but worried about how you actually write uh
+software so so corresponding to the citation of the touring award there is a touring
+award lecture and this is the title of D's
+lecture which he gave on receiving the touring award called The Humble programmer so he talks about his
+background and how he got into programming but uh somewhere down the line he starts talking about this whole
+issue about software engineering so this is really in some sense his first U public pronouncements on this topics
+come around this time so he says that as long as there were no machines programming was not a
+problem when we had a few weak computers programming became a mild problem and so
+now we have gigantic computers and programming has become an equally gigantic problem so his contention was
+that as the power of the machine to ex execute and the expectation grows you write more and more complex things and
+you understand less and less what you've written and you are unable to Fathom whether your program is doing what you think it's doing right so he also coined
+now this is another thing there are many things I didn't know that Tas at first but he's probably the first person who wrote this phrase right so is it a
+wonder that we find ourselves in a software crisis so this is part of a steering
+award uh acceptance address right so he's basically moving
+from programming language design to program design as as it were and
+indirectly towards what we would Now call software engineering so so this is around the
+Structured Programming
+time that he started strongly advocating this notion of structured programming so the idea with structured
+programming is that you have these blocks like if then else while and all that and then you can reason about your program in terms of these blocks and
+build up your understanding of the program by building your program systematically out of these blocks so in
+this context I should mention something which he did so this is early '70s we're
+talking about but there's a very famous uh letter which he wrote in
+1968 uh which actually he this apparently the title of this letter is not his the title of this letter that he
+wrote was a little bit more innocuous I forget a comment on the go-to statement or something like that this this is Nicholas worth who made this title like
+this because he wanted to draw attention to it so it came as a letter to the editor in cacm the communications ACM
+and basically the Crux of his argument was that the go-to statement is an invitation to make a mess of once's
+program right so he strongly advocated that goto should be banned from programming languages and in fact I
+think that if I'm not mistaken the first modern programming language without a go-to is
+Java so so this was part of this structured programming thing so the idea was that you should have your control of
+the flow of your program should be in kind of manageable units and you should be able to reason about these units in a
+uh constructive way by building up your reasoning so more specifically around this time he was focusing as I said on
+deriving correct program
+deriving correct program so this is another one of his quotable quotes so remember that if you remember the
+citation it said that program should be built correctly and not by careful debugging that was one of the statements
+in the citation right so this was one of his uh famous statements which he made in many different forms but this is
+apparently the shortest kog complexity version of this quote it says testing
+shows the presence not the absence of bugs so his point is that if you debug okay what will you find if you find a
+bug then your debugging has told you something but if you don't find any bugs thanks to I if you don't find any mistakes thanks to your testing it
+doesn't give you any assurance that you've written the right program because you only testing against what your expectation was and that's inadequate so
+you must actually build your program correctly systematically so so he formulated this
+way of thinking about it so he said that you execute now this remember in a
+structured setting so in a structured setting your whole program can be thought of as one big statement which is
+broken up into these blocks which are independently blocks and blocks so it's a kind of a like a whatever this babush
+card doll kind of thing right so ultimately you're only reasoning about one statement and what happens after that and what you're interested in is
+what happens after right you're writing a program to achieve an objective so you write down that objective call it call
+it R okay so R is the desired property after the statement s executes so now
+your question is if I want R to happen after my statement what should be true of my uh all the values that I'm Computing
+before I start R the statement and this is called the weakest precondition right so this is the set of initial conditions
+from which I'm guaranteed that if I run my program I'm going to get on and this is the basis of his notion of deriving
+correct programs now it's an extremely tedious and manual process and it
+doesn't scale that's a different issue but he had the idea that there is
+something which is beyond just you know writing code and then going and applying
+tests and seeing if all the tests pass that you have to think seriously about what you what your objective is and try
+to see if you are achieving that objective systematically by analing izing what your statement is doing so in
+his uh in the same paper where he talks about this he introduced this idea so what is RR is a what you can call a
+predicate right it's a property it's a it's a logical formula about your variables X is less than y AI is less
+than AJ for every whatever so some property about your variables and this property after the program
+executes the property changes so the predicate changes right so in his view a
+program is something that transforms a predicate on your things into another predicate right so program as a
+predicate Transformer so these are all I'm not going to go into any more details but these are all influential ideas which I think many people worked
+on as I said some of these ideas don't scale so in a modern setting you don't but people are going back to this in a
+different way okay they're using these ideas in a different way to do automated verification to try and guess these
+assertions and so
+on so along with this although I said he had kind of abandoned programming
+guarded command
+languages as such he still had an idea that programming notation is not ideal
+and in part this is due to his work in distributed computing which I haven't yet talked about but he said that you
+know this uh if then else he felt was too asymmetric so basically he said what we
+should do is we should actually think of what he called a guarded command so we have a bunch of things so if then else
+is saying if a condition holds then do one part otherwise do another part so he said why should we have this Mutual
+exclusion this or that okay so he said okay you have a bunch of conditions and
+you have a bunch of things and one of them or more of them could be true so here is an example so
+so so this thing um is trying to figure out the maximum of two values X and
+Y right so there are two uh statements the first statement and second and there
+is this kind of thing which uh sometimes can be drawn as a rectangle
+which says that I have a choice between that and that but the choice is dictated by this condition so if x is greater than equal to Y then M will be assigned
+the value X if Y is less than or greater than equal to x m will be assigned the value y right now if you write an if
+than else then depending on how you phrase that greater than equal to or greater than right then you will either
+if they're equal one of them will be copied X will be copied or Y will be copied so it depends crucially on whether you write that initial thing as
+greater than or greater than equal to as to what happens when the two are equal which one it may not matter to you so
+much but it depends on what assignment means okay so his point here is that this is actually you don't know right if
+x is equal to Y both of these are true Y is greater than equal to x x is greater than equal to Y so you're not sure whether M gets assigned X or M gets
+assigned y but as far as you are concerned it doesn't matter m is still the maximum right so his point was that
+this kind of notation simplifies arguing about these things and it removes some kind of sequential analysis which you
+have to to do in this if then else because if then else kind of makes a priority out of this condition then this condition and this condition so if you
+have a choice of conditions he felt this now just to illustrate this he came up with this example so this example is
+trying to arrange four values in non decreasing
+order right so what he says is okay so you have these initial four values which are these Capital
+Q's right and then you assign them to your values small q's and you finally want that small q1 is less than equal
+small Q2 is less than equal to small Q3 is less than equal to small Q4 so initially there could be any arbitrary values so what do you do you just keep
+checking okay if the thing is wrong here if q1 is bigger than Q2 you exchange them now if you have uh anybody here has
+studied python okay you can see where python got this uh simultaneous
+assignment operation right so it says assign q1 to Q2 and simultaneous so this exchange the values of q1 and Q2 same
+way if Q2 is and Q3 are not ordered the right way exchange the values of Q2 and Q3 same with Q3 and Q4 how long do you
+do it well you do it indefinitely so this is that is an if which you do once this is a kind of infinite Loop which
+you do until nothing can happen anymore so basically on their own spontaneously these values are
+rearranging themselves so that the first value is less than the second value second value is less than the third value third value is less than the
+fourth value okay so this is a style which he introduced so this is a notation called guarded commands which
+dyra introduced and it's actually quite popular in uh in describing many kinds
+of algorithms it's also used in some verification tools like there's a very powerful tool called spin which is used
+for verifying concurrent protocols so so this is a part of it but it's actually
+related to his correctness thing and it's not he doesn't expect you to write code like this I mean it's not a he
+doesn't have a compiler for guarded commands but it's more like a specification
+style right so move along briskly so uh so coming to
+Concurrent programming
+distributed computing or more precisely I would say concurrent programming so
+dyar was one of the first people to Envision this idea so I mean you can imagine that this is the early 60s and
+he is already thinking about the fact that computers are not working in isolation right computers are
+working in a way where they have to interact with each other so in ' 68 he finally wrote a very
+long uh and somewhat influential uh what monograph I guess is the best
+word for it called cooperating sequential processes and it starts off by
+introducing alol 60 notation as to as a good way of writing program so basically starts it's aimed at the person a what
+you might call an intelligent Layman who doesn't know anything about programming so it starts off the first chapter is about describing how to write down an
+algorithm in Alo 60 and then rapidly he moves on to this question of what happens when these things are running
+simultaneously and periodically they need to interact with each other so they're not running in a kind of synchronized way where they coordinate
+so there's no timing assumption or whatever but they need to periodically synchr yeah interact with
+Cel so so the first problem we identified and one which uh is still the
+most canonical problem in this is the one of mutual exclusion right so it uh
+if you have two machines on a network and two people are trying to print you
+would like to ensure that they don't print on the same printer at the same time otherwise you'll get some jumbled
+print out right and this is a typical problem which happens any number of times with any number of different things so you might say the same thing
+about you know accessing say u a reservation system you would not like
+two queries or two bookings to be made simultaneously on a reservation system and grab both of them claiming to grab
+the last seat available right so this is a very quintessential problem of concurrent programming
+and it was not entirely clear to me until I started reading about this that
+actually dyra in some sense was the first person to identify it and name it also I mean he was the first person who
+identified Mutual exclusion as the the heart of concurrent programming along
+the way he also talks about for the first time in the literature
+problem of Deadlock where two of these agents or Computing agents are trying to
+synchronize with each other and each is waiting for something that the other one is supposed to do and they can't uh
+solve it I mean so like this entrance to ramanam city that road right so everybody is trying to block each other
+and nobody willing to go back and then everybody's stuck so he called it the deadly Embrace but soon it became called
+Deadlock perhaps a little bit more uh again
+farsightedly he also said that this is a problem that cannot be solved uh on your own right you as a
+programmer you need some way of enforcing synchronization so this is some support
+which has to be given outside your normal assignment statement and while statement and all that you need some extra uh thing because this is not
+something that you can just wish away so he invented this thing which we
+now called a sem four which is a way of coordinating between two of these
+processes and allowing them to ensure that both of them will not get into this critical section as they call it this
+Mutual exclusion both of them will not try to do it and he also for instance invite
+invented this very famous example which is used as a benchmark for many various
+uh Solutions and Pro or notations for concurrent programming called the dining
+philosophers problem so the dining philosophers problem imagines that you have a group of say five philosophers
+sitting around a round table and they have a fork between each of them so there are Five Forks situated between
+the five philosophers but unfortunately each philosopher needs both Forks the one on his left and the one on his right
+to eat but the one on your right is also shared with your philosopher on your
+right so there is a issue that if that guy grabs the fork if everybody grabs the left Fork first then you have
+deadlock because nobody's going to get the Right Fork because there are only five forks and they have to eat so the question is
+how do you design a protocol where everybody will get a chance and without
+you know literally starving people out and so on so so all of these uh things
+actually were um in I mean so this dining philosophers was actually a homework
+exercise he set it as a exercise for his students
+and again I think his name was slightly less poetic and I think Tony was the one who called it dining
+philosophers his thing was dining something else's but uh but the point is that all these ideas actually stem from
+uh originally from dyra which is uh something surprising to
+Selfstabilizing
+me so he did more he also invented uh class of algorithms called
+self stabilizing so this is important when you have uh
+faults in your system so supposing you have some some kind of a protocol
+running and then one of the key elements of your system goes down then somehow
+you have to reestablish that protocol and so he came up with algorithms which
+will do that and uh this has again been an enormously influential area of work
+in distributed algorithms he also described uh the
+first formally correct concurrent garbage collecting algorithm so garbage collection is something that happens in
+languages like Java and Python and all where you don't explicitly dispose of
+memory which you have dynamically allocated and the system is supposed to periodically check whether some values
+are no longer being referred to in your program and return them to the free space now if it runs as a sequential
+thing that it stops your program and restores the free space obviously there is a performance issue so the ideal thing is that this
+garbage collection should run while your program is running but then the problem is that your program is at the same time
+consuming and returning things to memory while this garbage is being collected so how do you ensure that there is no
+inconsistency between what the garbage collector thinks is unused memory and what your program thinks is used memory
+right so this was also one of the contributions of uh dyra so so one of my uh justifications for
+claiming that this is his most well-known contribution is that this is one of the few things which is actually
+named after him so there is an Edgar W dyra price in distributed computing
+which is for the most influential paper in in the area and it's awarded alternately at these two U uh principal
+uh conferences principles of distributed computing PC and disk which is uh I mean
+it's got some funny it's one of these European names which is not to be read in the order in which it's given so they
+alternately give it so one is an American Conference one is so ACM part is an ACM conference and dis is a
+European Association of theoretical computer science conference right so this is the price which uh is in his
+name and it is in the area of distributed computing right which is not even mentioned in his during
+Writing style
+award so one of the things that uh dyra is
+well known all is as I said the clarity of his writing as I showed you even as early as his very first work on shortest
+Parts he writes very crisp and very concise but clear definitions proofs theorems
+everything is written in a very precise way and uh he I mean there are
+limitations also so he would uh refuse to use complicated notation but which
+also limits what you can do for some strange reason apparently he also had an aversion to using pictures
+so he felt that pictures are not I mean if you need a picture then something's wrong right so he would never draw a
+picture and there are no pictures in his papers at all actually uh apparently he had a rather
+Cavalier approach to references so this goes back to the point that he rediscovered prim's algorithm so part of
+the reason he rediscovered prim's algorithm is because he didn't bother to find out if somebody else had worked on this problem before or not and and U so
+there is a uh an instance of this which is self-documented so he wrote this book
+called discipline of programming and in the introduction he says for the absence of a bibliography I offer neither
+explanation nor apology right so he writes a whole book with no
+references and this is typical of his style so in fact he wrote another book so this book I think survived he wrote
+another book uh whose name I've forgotten but which got a scathing review because it was was basically
+claiming to prove things like you know equality is associative and things like that with respect to propositional logic
+and uh the reviewer who reviewed it said that you know clearly this person is got
+to go and read more about what logicians have done for 100 years before claiming
+to have invented propositional logic so not everybody subscribed to this uh
+style that all was discovered by himself but he clearly discovered it everything himself in his opinion so this was about
+his writing style now he was also as you have noted in that letter to the alol
+committee not exactly polite or you know diplomatic about his choice of
+words most often it was interesting that most often it was actually put down in writing okay it's it's hard to withdraw
+something which you have written to somebody but sometimes it was also apparently so so by all accounts he was
+not openly rude in person but there is this incident which was uh uh quoted in
+his obituary by Kristoff AB so apparently there was a lecture in by
+some famous MIT Professor who was unnamed when he was in Austin and at some point she said I'm losing my voice
+and it seems from the back he said thank God then as a
+after thought apparently the chairman of the department had to write a abject apology to this visiting Prof on behalf
+of dyra so apparently this is not typical but this is I mean he didn't do this often but he has done things like
+this right so the flip side of this so if you
+watch that movie one of the touring aies in that movie was a person called Alan K so this is what Alan K had to say when
+he gave a keynote speech at a conference he said you probably know that arrogance
+in computer science is measured in Nano Dias okay
+so this is when he was still alive by the way he died only in 2002 right so he
+just got back what he was giving uh uh so so certainly he was a
+colorful personality and I said he's extremely quotable I had to there a lot of quotes
+A colorful personality
+which are about uh things where he says nasty things about objects like he complains about programming languages
+like cobal and Fortran and all that but I thought I should Entertain You by a using some of you here in the audience
+so the first quote is for my colleagues from physics so it says in the good old
+days physicists repeated each other's experiments just to be sure today they stick to Fortran so they can share each
+other's programs bugs included okay so this is just a typical of the kind of comment he would make now not to spare
+computer scientists so if you remember there was all this talk about alent touring and the touring test and can
+computers think right this is what dexra has to say the question of whether machines can think is about as relevant
+as a question of whether submarines can swim so you can take whatever you want
+of this but there is a whole web page of quotes and some of them are mildly amusing and some of them are dated and
+so on but it's interesting that you know he could hold forth on everything and uh
+you know never let an opportunity pass where he could give an opinion on something that he thought was worthy of
+giving an opinion on so I
+Worlds first blogger
+would claim that dyar was a world's first blogger so he wrote the sequence of
+manuscripts which are later numbered as ewd for his initials 001 802 and so on
+so everything that he wrote including his papers okay are available in some form in this manuscript so some of these
+are technical notes so some some of them are pre-prints okay some of them are just trip reports I went to this
+conference I like this talk I didn't like the talk the weather was awful the road was fine and all that some of them
+are observations okay this style is bad this style some of them are commentaries
+okay so the earlier ones of these were typewritten on this old typewriter okay
+and the later ones were handwritten so this is what a typical so
+Edsgers handwriting
+this is the one about guarded command so this is an so you can see the zwd 418 on the top okay so this is so this is typed
+by dexra okay this is his thing and this is a handwritten
+thing which came a little later you can see the numbering so it's 898 okay they're not consecutive there are a lot
+of things that he threw away so there not that he has written 898 of them but every time he started a new one you give
+a new number and then some of them may never finished or many of them may never finished but there are a good number of them okay so the question is do you recognize
+this
+Dijkstra font
+handwriting right so so this is actually been converted into a font right so Luca
+cardelli who's now uh researcher at Microsoft research in Cambridge UK and
+who has designed a number of interesting logos and things for computer science actually created this font and it seems
+when he first created it and he sent uh a document in this font to dyar dyar did
+not realize that it was actually not handwritten so he was very thrilled with this fact okay so you can download it
+and you can use it in your own presentation if you want right so there is a dyra
+font so so I'll close with one of my favorite
+ewds okay which so there is one ewd I forget the
+number you can look it up which is called a parable right so this is a story so it says a long time ago there
+was a railway company and they had these coaches where passengers could sit which had toilets
+at one end so the board of directors of this Railway company decided to cut costs and
+remove toilets from 50% or create new coaches without toilets so that only 50%
+of the coaches had toilets so what was the outcome of this
+the problem was that this board decision was not communicated to the people who actually assembled the trains and put
+them out to run so the toilets were distributed in a random way across train
+so some trains had toilets in every coach and some trains had no toilets and so on so complete chaos right so then
+um they said okay you know you have you can't do this you have to put toilet
+coaches on every train right so you mark the coach is outside saying whether it
+has a toilet or not and then you make sure that 50% of the coaches in every train have toilets so all trains are
+covered with toilets okay so it's kind of makes life more complicated because you have to now make sure that you count
+and all that so when you are doing this the people who are doing this are not terribly amused but of course this
+doesn't completely solve the problem because uh it doesn't guarantee that the toilets are distributed across the train
+all the toilets are in the front half in the back half there are no toilets okay so the passengers are not amused by this so more complaints come back to these
+famous directors so then uh they tell these guys no no no you know not half
+alternate right one toilet one more toilet one toilet one more toilet but uh the problem is still not
+resolved okay and that's because remember the toilet is only at one
+end right so you could have a situation where this toilet is at this end that toilet is at that end and the alternate
+coach in between so there's a section which is almost three coaches long between toilets which is not the
+intention right so here he says the parents of small children were not
+amused so one of the problem is you don't know which way to go right so he said okay make sure that the
+toilets are all pointing the same direction so you don't have this three three Gap it's only two Gap but even if
+you have only a two Gap if you're sitting inside right so you're sitting in a coach who
+doesn't have a toilet now is your nearest toilet to your right or to your
+left might be that you are to walk one and a half coaches to reach a toilet if you go the wrong way right so where is
+Toilet
+the toilet so then you said okay inside we'll put an arrow saying toilet is that
+way nearest toilet is this way okay but now what has happened is that even the coaches so first all the coaches with
+the toilet have to all be put facing in the same direction now all the coaches without toilet also have be put carefully because the Val was inside
+also to facing the correct direction when you put them together so it's getting more and more complicated
+right and then somebody has some light bulb okay so they
+Toilet Coach
+say you take a toilet coach you take a non- toilet coach and put a toilet in the
+middle right now you can say on the other side that this is the nearest toilet it's fine but it doesn't matter if you rotate it around it's still the
+nearest toilet right so now each
+pair is now identical and it doesn't matter whether the pair is facing that way or this way so you assemble your
+train in pairs and each pair is a pair of coaches with a toilet near the middle it's either on the side or that side
+it's approximately in the middle right so it's not a perfect solution you might still have to go a
+little bit longer than you wanted to but as he said life goes on again so this is the parable now comes a
+conclusion okay so according to drra okay so he said the anonymous hero
+Dijkstra
+who found the solution deserves to be called the world's first competent
+programmer and he goes on to say that programmers are delighted with the story then he says managers get more and
+References
+more annoyed as the story progresses okay but this is not the end of
+D's uh nastiness so he says mathematicians don't see the point
+right so this is my favorite uh ewd but there are a lot of gems like this I
+encourage you to go and read them thank [Applause]
+you so I should also mention that unlike D I have some references so the first reference is
+actually a nice one it's about seven pages long you can get it from you don't have to go to the journal uh Christof
+apt has a copy on his web page so it's a nice uh obituary biography of
+dyra and uh then there is a whole Wiki quote page with extra quotes and at
+Texas Austin they actually maintain an archive of all the ewds so the ewds are
+available both in the original scanned form as a PDF but they are also been transcribed into HTML so you can just
+read them and uh on the screen so uh you can go and I think most of almost
+everything that I started is there in ewd that thank
+[Applause] you thank you professor madon and any
+questions from the
+audience there's a dexra quote in the corridor right outside this Auditorium people can hunt for it
+[Music] any other
+questions no questions so we would like to thank Professor Madan and
+uh as a token of our appreciation Professor sakil will give a momento to
+Professor madin
+[Music] yeah the tea and snacks are outside so
+you can go and enjoy thank you
