@@ -1,4 +1,4 @@
-# MadhavanGPT — RAG Learning Tool
+# GPT — RAG Learning Tool
 
 A Retrieval-Augmented Generation (RAG) system that serves as a learning tool for CS/DS courses, preserving Professor Madhavan's teaching style, terminology, and explanations.
 
